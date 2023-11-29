@@ -407,11 +407,13 @@ button {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	z-index: 1;
 
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		z-index: 1;
 	}
 
 	&:after {
@@ -424,6 +426,7 @@ button {
 		right: 0;
 		width: 100%;
 		height: 100%;
+		z-index: 2;
 		background: linear-gradient(180deg, #1E1F22 0%, rgba(30, 31, 34, 0.00) 50%, #1E1F22 100%);
 	}
 
@@ -439,40 +442,206 @@ button {
 		height: 100%;
 		background: #0F0F11;
 		opacity: 0.5;
+		z-index: 2;
 	}
 }
 
-.header {
-	position: absolute;
-	width: 100%;
-	height: 150px;
-	// height: 124px;
-	background: linear-gradient(180deg, #1E1F22 18.23%, rgba(30, 31, 34, 0.00) 100%);
+main {
+	position: relative;
+	top: 100dvh;
 
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 150px;
+		background: linear-gradient(180deg, #1E1F22 18.23%, rgba(30, 31, 34, 0.00) 100%);
+	}
+}
+
+.loader_wrapper {
+	width: 100%;
+	height: 100dvh;
+	z-index: 1000;
+	position: relative;
+	position: fixed;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -100px;
+		right: 0;
+		width: 100%;
+		height: 200px;
+		background: $color_yellow;
+		z-index: 1;
+	}
+}
+
+.loader {
+	background: $color_black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.loader_logo {
+	max-width: 680px;
+	width: 100%;
+	margin-bottom: 82px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.loader_line {
+	display: block;
+	position: relative;
+	height: 4px;
+	width: 100%;
+	max-width: 440px;
+	background: $color_white;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 0;
+		background: $color_yellow;
+	}
+
+}
+
+.header_bg_img {
+
+	img {
+		animation: 1.5s bgImg ease-in forwards;
+		animation-delay: 5.5s;
+		transform: scale(1.5);
+	}
+
+	&:before {
+		animation: 1.5s bgBefore ease-in forwards;
+		animation-delay: 5.5s;
+		opacity: 0;
+	}
+}
+
+main {
+	animation: 1s endAnimateTop ease-in forwards;
+	animation-delay: 4.5s;
+}
+
+.loader_wrapper {
+	animation: 1s endAnimate ease-in forwards;
+	animation-delay: 4.5s;
+
+	&:after {
+		animation: 1s endAnimateAfter ease-in forwards;
+		animation-delay: 4.5s;
+	}
+}
+
+.loader_line:after {
+	animation: 4s prog ease-in forwards;
+}
+
+@keyframes bgImg {
+	to {
+		transform: scale(1);
+
+	}
+}
+
+@keyframes bgBefore {
+	to {
+		opacity: 0.5;
+
+	}
+}
+
+@keyframes prog {
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes endAnimate {
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes endAnimateAfter {
+	to {
+		transform: translateY(-50%);
+	}
+}
+
+@keyframes endAnimateTop {
+	to {
+		top: 0;
+	}
+}
+
+.mobile_menu {
+	display: none;
+}
+
+.header {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+
+	&.fix {
+		position: fixed;
+		// top: 30px;
+
+		.header_elem {
+			transform: translateY(-100%);
+		}
+
+		&:not(.fix-on-scroll) {
+
+			.header_block_wrapper {
+				&:before {
+					height: calc(100% + 10px);
+					bottom: -10px;
+				}
+			}
+		}
+	}
+
+	&.fix-on-scroll {
+		.header_elem {
+			transition: $transition;
+			transform: translateY(0%);
+		}
+	}
 
 
 }
 
-// .header_elem {
-// 	width: 100%;
-// 	transition: $transition;
-
-// 	&.fix {
-// 		position: fixed;
-// 		// top: -124px;
-// 		z-index: 100;
-
-// 		.header_block_wrapper {
-// 			transform: translateY(-124px);
-
-// 			&.header_hidden {
-// 				transform: translateY(0px)
-// 			}
-// 		}
-
-// 	}
-
-// }
+.header_elem {
+	width: 100%;
+	transition: $transition;
+	position: relative;
+	padding-top: 30px;
+}
 
 .header_block {
 	border-radius: 16px;
@@ -487,20 +656,8 @@ button {
 .header_block_wrapper {
 	position: relative;
 	max-width: 1420px;
-	width: calc(100% - 60px);
 	z-index: 100;
-	position: fixed;
-	top: 30px;
 	transition: $transition;
-
-	&.header_hidden {
-		transform: translateY(-124px);
-
-		&:before {
-			height: calc(100% + 10px);
-			bottom: -10px;
-		}
-	}
 
 	&:before {
 		content: '';
@@ -2073,113 +2230,6 @@ $animation-setting: 0.8s ease-in-out forwards;
 	}
 }
 
-main {
-	// transform: translateY(100dvh);
-	// position: relative;
-	// top: 100dvh;
-	// animation: 1s endAnimateTop ease-in forwards;
-	// animation-delay: 5.5s;
-
-}
-
-.loader_wrapper {
-	width: 100%;
-	height: 100dvh;
-
-	z-index: 1000;
-	position: relative;
-	position: fixed;
-	animation: 1s endAnimate ease-in forwards;
-	animation-delay: 5.5s;
-
-	&:after {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: -100px;
-		right: 0;
-		width: 100%;
-		height: 200px;
-		background: $color_yellow;
-		z-index: 1;
-		animation: 1s endAnimateAfter ease-in forwards;
-		animation-delay: 5.5s;
-	}
-}
-
-.loader {
-	background: $color_black;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 100%;
-	position: relative;
-	z-index: 2;
-}
-
-.loader_logo {
-	max-width: 680px;
-	width: 100%;
-	margin-bottom: 82px;
-
-	img {
-		width: 100%;
-	}
-}
-
-.loader_line {
-	display: block;
-	position: relative;
-	height: 4px;
-	width: 100%;
-	max-width: 440px;
-	background: $color_white;
-	border-radius: 10px;
-	overflow: hidden;
-
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 0;
-		background: $color_yellow;
-		animation: 5s prog ease-in forwards;
-	}
-
-}
-
-@keyframes prog {
-	to {
-		width: 100%;
-	}
-}
-
-@keyframes endAnimate {
-	to {
-		transform: translateY(-100%);
-	}
-}
-
-@keyframes endAnimateAfter {
-	to {
-		transform: translateY(-50%);
-	}
-}
-
-@keyframes endAnimateTop {
-	to {
-		// transform: translateY(0);
-		top: 0;
-	}
-}
-
-.mobile_menu {
-	display: none;
-}
-
 @media screen and (min-width:577px) {
 	.menu_list a {
 		&:hover {
@@ -2313,6 +2363,12 @@ main {
 
 	.result_block_left {
 		padding-right: 20px;
+	}
+}
+
+@media screen and (max-width:1250px) {
+	.result_item {
+		width: calc(50% - 10px);
 	}
 }
 
@@ -2782,10 +2838,6 @@ main {
 		}
 	}
 
-	.header_block_wrapper {
-		width: calc(100% - 30px);
-	}
-
 	h1 {
 		font-size: 34px;
 	}
@@ -2971,11 +3023,11 @@ main {
 		font-size: 13.5px;
 	}
 
-	.header_block_wrapper {
-		top: 6px;
+	.header_elem {
+		padding-top: 6px;
 	}
 
-	.header {
+	main:before {
 		background: linear-gradient(180deg, #1E1F22 0%, rgba(30, 31, 34, 0.00) 100%);
 	}
 

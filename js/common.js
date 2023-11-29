@@ -44,7 +44,6 @@ $(document).ready(function () {
 
     //Скрыть/показать хедер при прокрутке
 
-
     // $(window).scroll(function (e) {
     //     e.preventDefault();
     //     var header = $('.header');
@@ -62,34 +61,59 @@ $(document).ready(function () {
     //         // }, 2000);
     //     }
     // })
-    const onScrollHeader = () => {
-        const header = $('.header_block_wrapper');
-        const sticky = $('.company_block_sticky');
-        let prevScroll = $(window).scrollTop();
+    // const onScrollHeader = () => {
+    //     const header = $('.header_block_wrapper');
+    //     const sticky = $('.company_block_sticky');
+    //     let prevScroll = $(window).scrollTop();
+    //     let currentScroll;
+
+    //     $(window).scroll(() => {
+    //         currentScroll = $(window).scrollTop()
+    //         const headerHidden = () => header.hasClass('header_hidden')
+
+    //         if (currentScroll < prevScroll && !headerHidden()) {
+    //             setTimeout(() => {
+    //                 // header.addClass('aefsdgdhs');
+    //                 header.addClass('header_hidden');
+    //                 sticky.removeClass('out')
+    //             }, 0);
+    //         }
+    //         if (currentScroll > prevScroll && headerHidden()) {
+    //             // setTimeout(() => {
+    //             // header.removeClass('header_hidden');
+    //             header.removeClass('header_hidden');
+    //             sticky.addClass('out');
+    //             // }, 0);
+    //         }
+    //         prevScroll = currentScroll
+    //     })
+    // }
+    // onScrollHeader()
+    let prevScroll = $(window).scrollTop();
+
+    const header = document.querySelector('header');
+    const headerElem = document.querySelector('.header_elem');
+    const sticky = document.querySelector('.company_block_sticky');
+    window.addEventListener('scroll', e => {
+        if (window.scrollY > headerElem.clientHeight) {
+            header.classList.add('fix')
+        } else {
+            header.classList.remove('fix')
+        }
+
         let currentScroll;
-
-        $(window).scroll(() => {
-            currentScroll = $(window).scrollTop()
-            const headerHidden = () => header.hasClass('header_hidden')
-
-            if (currentScroll > prevScroll && !headerHidden()) {
-                setTimeout(() => {
-                    // header.addClass('aefsdgdhs');
-                    header.addClass('header_hidden');
-                    sticky.removeClass('out')
-                }, 0);
-            }
-            if (currentScroll < prevScroll && headerHidden()) {
-                // setTimeout(() => {
-                // header.removeClass('header_hidden');
-                header.removeClass('header_hidden');
-                sticky.addClass('out');
-                // }, 0);
-            }
-            prevScroll = currentScroll
-        })
-    }
-    onScrollHeader()
+        currentScroll = $(window).scrollTop()
+        console.log(currentScroll < prevScroll);
+        if (currentScroll < prevScroll && header.classList.contains('fix')) {
+            header.classList.add('fix-on-scroll');
+            sticky.classList.add('out');
+        }
+        if (currentScroll > prevScroll && header.classList.contains('fix')) {
+            header.classList.remove('fix-on-scroll');
+            sticky.classList.remove('out');
+        }
+        prevScroll = currentScroll
+    })
 
     //слайдер в блоке результат
     var swiperWallet = new Swiper(".result_slider", {
@@ -104,10 +128,10 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
     });
 
     //слайдер в блоке партнеры
@@ -153,19 +177,6 @@ $(document).ready(function () {
             },
         },
     });
-    // $('.result_item .number span').each(function () {
-    //     let count = $(this).attr('data-countup-number')
-    //     console.log(count);
-    //     $(this).numScroll({
-    //         'time': 1500,
-
-    //         'delay': 0,
-
-    //         number: count
-
-    //     });
-    // })
-
 
     var counters = document.querySelectorAll('.number span'),
         len = counters.length,
@@ -238,120 +249,6 @@ $(document).ready(function () {
             showAnimation();
         }
     }).trigger("scroll");;
-
-
-    // счетчик
-    // class countUp {
-    //     constructor(el) {
-    //         this.el = el;
-    //         this.setVars();
-    //         this.init();
-    //     }
-
-    //     setVars() {
-    //         this.number = this.el.querySelectorAll("[data-countup-number]");
-    //         this.observerOptions = {
-    //             root: null,
-    //             rootMargin: "0px 0px",
-    //             threshold: 0
-    //         };
-    //         this.observer = new IntersectionObserver((entries) => {
-    //             entries.forEach((entry) => {
-    //                 const end = parseFloat(
-    //                     entry.target.dataset.countupNumber.replace(/,/g, "")
-    //                 );
-    //                 const decimals = this.countDecimals(end);
-    //                 if (entry.isIntersecting) {
-    //                     this.iterateValue(entry.target, end, decimals);
-    //                 }
-    //             });
-    //         }, this.observerOptions);
-    //     }
-
-    //     init() {
-    //         if (this.number.length > 0) {
-    //             this.number.forEach((el) => {
-    //                 this.observer.observe(el);
-    //             });
-    //         }
-    //     }
-
-    //     iterateValue(el, end, decimals) {
-    //         const start = 0;
-    //         const duration = 5000;
-    //         let startTimestamp = null;
-
-    //         const step = (timestamp) => {
-    //             if (!startTimestamp) startTimestamp = timestamp;
-    //             const elapsedPercent = (timestamp - startTimestamp) / duration;
-    //             const easedProgress = Math.min(this.easeOutQuint(elapsedPercent), 1);
-    //             let interimNumber = Math.abs(easedProgress * (end - start) + start);
-    //             el.innerHTML = this.formatNumber(interimNumber, decimals);
-    //             if (easedProgress < 1) {
-    //                 window.requestAnimationFrame(step);
-    //             }
-    //         };
-
-    //         // requestAnimationFrame returns DOMHighResTimeStamp as a callback (used as timestamp)
-    //         window.requestAnimationFrame(step);
-    //     }
-
-    //     easeOutQuad(x) {
-    //         return 1 - Math.pow(1 - x, 3);
-    //     }
-
-    //     easeOutQuint(x) {
-    //         return 1 - Math.pow(1 - x, 5);
-    //     }
-
-    //     countDecimals(val) {
-    //         if (Math.floor(val) === val) return 0;
-    //         return val.toString().split(".")[1].length || 0;
-    //     }
-
-    //     formatNumber(val, decimals) {
-    //         return val.toLocaleString("en-US", {
-    //             minimumFractionDigits: decimals,
-    //             maximumFractionDigits: decimals
-    //         });
-    //     }
-    // }
-
-    // const dataModules = [...document.querySelectorAll('[data-module="countup"]')];
-
-    // dataModules.forEach((element) => {
-    //     element.dataset.module.split(" ").forEach(function () {
-    //         new countUp(element);
-    //     });
-    // });
-
-    // $('.number span').counterUp({
-    //     // delay: 10,
-    //     // time: 1200
-    // });
-    // var section = document.querySelector('.countup');
-    // var hasEntered = false;
-
-    // window.addEventListener('scroll', (e) => {
-    //     var shouldAnimate = (window.scrollY + window.innerHeight) >= section.offsetTop;
-
-    //     if (shouldAnimate && !hasEntered) {
-    //         hasEntered = true;
-
-    //         $('.number span').each(function () {
-    //             $(this).prop('Counter', 0).animate({
-    //                 Counter: $(this).text()
-    //             }, {
-    //                 duration: 4000,
-    //                 easing: 'swing',
-    //                 step: function (now) {
-    //                     $(this).text(Math.ceil(now));
-    //                 }
-    //             });
-    //         });
-
-    //     }
-    // });
 
 
     // modals
