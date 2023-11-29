@@ -1315,8 +1315,10 @@ button {
   justify-content: center;
 }
 .administration_item_people img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  max-width: 260px;
+  max-height: 378px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1562,6 +1564,7 @@ button {
   position: absolute;
   top: 30px;
   right: 30px;
+  z-index: 5;
   cursor: pointer;
 }
 .modal .close svg {
@@ -1713,6 +1716,7 @@ button {
 .modal_btns {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
 }
@@ -2103,6 +2107,7 @@ button {
     height: 100%;
     z-index: 90;
     display: none;
+    background: #1E1F22;
   }
   .mobile_menu.active {
     display: block;
@@ -2302,8 +2307,27 @@ button {
     margin-bottom: 27px;
     justify-content: center;
   }
+  .modal-content .result_list {
+    flex-wrap: wrap;
+  }
+  .modal-content .result_item {
+    width: calc(50% - 10px);
+    max-width: 100%;
+  }
+  .modal_people_block_right {
+    padding-left: 40px;
+  }
+  .modal_people_block_left {
+    width: 320px;
+  }
+  .modal_people_block_right {
+    width: calc(100% - 320px);
+  }
 }
 @media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 60px 40px;
+  }
   .company_list {
     margin: 0;
   }
@@ -2427,8 +2451,36 @@ button {
   .footer_link a {
     font-size: 27px;
   }
+  .modal_people_block {
+    flex-direction: column;
+  }
+  .modal_people_block_left {
+    width: 100%;
+    height: 505px;
+  }
+  .modal_people_block_right {
+    width: 100%;
+    padding: 30px;
+  }
+  .modal_people_img_people {
+    width: calc(100% - 60px);
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 285px;
+  }
+  .modal_title {
+    font-size: 30px;
+  }
+  .modal_email {
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 576px) {
+  .stars_list svg {
+    fill: #FFCF00;
+    opacity: 1;
+  }
   .result_list {
     gap: 30px;
   }
@@ -2531,6 +2583,21 @@ button {
   }
   .footer_bottom .link {
     text-align: center;
+  }
+  .modal_company .modal_title {
+    display: none;
+  }
+  .modal-content {
+    padding: 30px;
+  }
+  .modal_text {
+    font-size: 16px;
+  }
+  .modal-content .result_list {
+    gap: 10px;
+  }
+  .modal-content .result_item {
+    width: 100%;
   }
 }
 @media screen and (max-width: 340px) {
