@@ -30,197 +30,241 @@
 
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/common.css?1">
+    <!-- чтобы при загрузке страницы у элементов не срабатывал transition -->
+    <script> </script>
 </head>
 
 <body class='page_home'>
-    <div class='header_bg'>
-        <div class='header_bg_img bg_img'><img src="/imgs/building_1.jpg" alt=""></div>
-        <header class='header'>
-            <div class="container">
-                <div class='header_block_wrapper'>
-                    <div class='header_block'>
-                        <div class='logo'>
-                            <img src="/imgs/logo.svg" alt="">
-                        </div>
-                        <nav class="menu">
-                            <ul class="menu_list">
-                                <li>
-                                    <a href="#about">О нас</a>
-                                </li>
-                                <li class="active">
-                                    <a href="#result">Результат</a>
-                                </li>
-                                <li>
-                                    <a href="#company">Наши компании</a>
-                                </li>
-                                <li>
-                                    <a href="#mission">Миссия</a>
-                                </li>
-                                <li>
-                                    <a href="#administration">Руководство</a>
-                                </li>
-                                <li>
-                                    <a href="#contacts">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class='language_wrapper'>
-                            <div class='language'>
-                                <span class='language_title'>RU</span>
-                                <ul class='language_dropdown'>
-                                    <li><a href="#">KZ</a></li>
-                                    <li><a href="#">EN</a></li>
+    <!-- <div class='loader_wrapper'>
+        <div class='loader'>
+            <div class='loader_logo'>
+                <img src="/imgs/logo.svg" alt="">
+            </div>
+            <span class="loader_line"></span>
+        </div>
+    </div> -->
+    <main>
+        <div class='header_bg'>
+            <div class='header_bg_img bg_img'><img src="/imgs/building_1.jpg" alt=""></div>
+            <header class='header'>
+                <div class="container">
+                    <div class='header_block_wrapper'>
+                        <div class='header_block'>
+                            <div class='logo'>
+                                <img src="/imgs/logo.svg" alt="">
+                            </div>
+                            <nav class="menu">
+                                <ul class="menu_list">
+                                    <li>
+                                        <a href="#about">О нас</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#result">Результат</a>
+                                    </li>
+                                    <li>
+                                        <a href="#company">Наши компании</a>
+                                    </li>
+                                    <li>
+                                        <a href="#mission">Миссия</a>
+                                    </li>
+                                    <li>
+                                        <a href="#administration">Руководство</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contacts">Контакты</a>
+                                    </li>
                                 </ul>
+                            </nav>
+                            <div class='language_wrapper'>
+                                <div class='language'>
+                                    <span class='language_title'>RU</span>
+                                    <ul class='language_dropdown'>
+                                        <li><a href="#">KZ</a></li>
+                                        <li><a href="#">EN</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='mobile_menu_btn'><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class='mobile_menu'>
+                <div class='mobile_menu_img bg_img'><img src="/imgs/building_4.jpg" alt=""></div>
+
+                <nav class="menu">
+                    <ul class="menu_list">
+                        <li>
+                            <a href="#about">О нас</a>
+                        </li>
+                        <li class="active">
+                            <a href="#result">Результат</a>
+                        </li>
+                        <li>
+                            <a href="#company">Наши компании</a>
+                        </li>
+                        <li>
+                            <a href="#mission">Миссия</a>
+                        </li>
+                        <li>
+                            <a href="#administration">Руководство</a>
+                        </li>
+                        <li>
+                            <a href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <section class="home">
+                <div class="container">
+                    <h1 class='home_title'>Предоставление финансовой <span>помощи населению</span> <span>во всех сферах
+                            жизни
+                            <img src="/imgs/arrow.svg" alt=""></span></h1>
+                    <div class='home_bottom'>
+                        <a href="#about" class='arrow arrow_down'>
+                            <svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_down">
+                                </use>
+                            </svg>
+                        </a>
+                        <div class='home_subtitle'>Всегда рады Вам помочь!</div>
+                    </div>
+                </div>
+            </section>
+            <section class="about section" id="about">
+                <div class="container">
+                    <div class='about_block'>
+                        <div class="about_block_left">
+                            <h3>О нас</h3>
+                            <h2><span class='color_yellow'>Сейф Group</span> была основана в 2009 году и
+                                предоставляет финансовые
+                                услуги
+                                клиентам в странах СНГ.</h2>
+                            <div>Мы руководствуемся убеждением, что доступные микрокредиты и&nbsp;другие финансовые
+                                продукты
+                                являются важнейшими инструментами достижения финансового благополучия. Сейф Group помог
+                                более 1 миллиону клиентов и ведет работу над улучшением качества предоставляемых услуг.
+                            </div>
+                        </div>
+                        <div class='about_block_right'>
+                            <div class='faq_list'>
+                                <div class="faq_item">
+                                    <button class="faq_item_btn">
+                                        <span class='count'>[01]</span>
+                                        <div class='name'> Надежность</div>
+                                        <svg>
+                                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <div class="faq_item_content">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
+                                        officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
+                                        voluptatibus
+                                        veniam ipsam esse? Minus, voluptates porro.
+                                    </div>
+                                </div>
+                                <div class="faq_item">
+                                    <button class="faq_item_btn">
+                                        <span class='count'>[02]</span>
+                                        <div class='name'> Профессионализм</div>
+                                        <svg>
+                                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <div class="faq_item_content">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
+                                        officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
+                                        voluptatibus
+                                        veniam ipsam esse? Minus, voluptates porro.
+                                    </div>
+                                </div>
+                                <div class="faq_item">
+                                    <button class="faq_item_btn">
+                                        <span class='count'>[03]</span>
+                                        <div class='name'> Прозрачность</div>
+                                        <svg>
+                                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <div class="faq_item_content">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
+                                        officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
+                                        voluptatibus
+                                        veniam ipsam esse? Minus, voluptates porro.
+                                    </div>
+                                </div>
+                                <div class="faq_item">
+                                    <button class="faq_item_btn">
+                                        <span class='count'>[04]</span>
+                                        <div class='name'> Гибкость</div>
+                                        <svg>
+                                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <div class="faq_item_content">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
+                                        officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
+                                        voluptatibus
+                                        veniam ipsam esse? Minus, voluptates porro.
+                                    </div>
+                                </div>
+                                <div class="faq_item">
+                                    <button class="faq_item_btn">
+                                        <span class='count'>[05]</span>
+                                        <div class='name'> Комфорт</div>
+                                        <svg>
+                                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <div class="faq_item_content">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
+                                        officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
+                                        voluptatibus
+                                        veniam ipsam esse? Minus, voluptates porro.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <section class="home">
+            </section>
+        </div>
+        <section class="result" id="result">
             <div class="container">
-                <h1 class='home_title'>Предоставление финансовой <span>помощи населению</span> <span>во всех сферах
-                        жизни
-                        <img src="/imgs/arrow.svg" alt=""></span></h1>
-                <div class='home_bottom'>
-                    <a href="#about" class='arrow arrow_down'>
-                        <svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down">
-                            </use>
-                        </svg>
-                    </a>
-                    <div class='home_subtitle'>Всегда рады Вам помочь!</div>
-                </div>
-            </div>
-        </section>
-        <section class="about" id="about">
-            <div class="container">
-                <div class='about_block'>
-                    <div class="about_block_left">
-                        <h3>О нас</h3>
-                        <h2><span class='color_yellow'>Сейф Group</span> была основана в 2009 году и
-                            предоставляет финансовые
-                            услуги
-                            клиентам в странах СНГ.</h2>
-                        <div>Мы руководствуемся убеждением, что доступные микрокредиты и&nbsp;другие финансовые продукты
-                            являются важнейшими инструментами достижения финансового благополучия. Сейф Group помог
-                            более 1 миллиону клиентов и ведет работу над улучшением качества предоставляемых услуг.
+                <div class='result_block'>
+                    <div class='result_block_left'>
+                        <h3>Результат</h3>
+                        <h2>Цифры которые говорят за нас</h2>
+                        <div>Мы гордимся количеством успешных наших сделок, ведь именно столько раз мы смогли помочь
+                            Вам. Мы
+                            всегда идем на встречу нашим любимым клиентам и&nbsp;находим решение даже в самых сложных
+                            ситуациях.
+                            Еще текст в этом блоке.
                         </div>
-                    </div>
-                    <div class='about_block_right'>
-                        <div class='faq_list'>
-                            <div class="faq_item">
-                                <button class="faq_item_btn">
-                                    <span class='count'>[01]</span>
-                                    <div class='name'> Надежность</div>
-                                    <svg>
-                                        <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <div class="faq_item_content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
-                                    officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia voluptatibus
-                                    veniam ipsam esse? Minus, voluptates porro.
-                                </div>
+                        <div class='result_list countup' data-module="countup">
+                            <div class='result_item'>
+                                <span class='number'><span data-from="0" data-to="130">130</span>+</span>
+                                Отделений по РК
                             </div>
-                            <div class="faq_item">
-                                <button class="faq_item_btn">
-                                    <span class='count'>[02]</span>
-                                    <div class='name'> Профессионализм</div>
-                                    <svg>
-                                        <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <div class="faq_item_content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
-                                    officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia voluptatibus
-                                    veniam ipsam esse? Minus, voluptates porro.
-                                </div>
+                            <div class='result_item'>
+                                <span class='number'><span data-from="0" data-to="1222222">1 222 222</span>+</span>
+                                Сделок совершено
                             </div>
-                            <div class="faq_item">
-                                <button class="faq_item_btn">
-                                    <span class='count'>[03]</span>
-                                    <div class='name'> Прозрачность</div>
-                                    <svg>
-                                        <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <div class="faq_item_content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
-                                    officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia voluptatibus
-                                    veniam ipsam esse? Minus, voluptates porro.
-                                </div>
-                            </div>
-                            <div class="faq_item">
-                                <button class="faq_item_btn">
-                                    <span class='count'>[04]</span>
-                                    <div class='name'> Гибкость</div>
-                                    <svg>
-                                        <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <div class="faq_item_content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
-                                    officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia voluptatibus
-                                    veniam ipsam esse? Minus, voluptates porro.
-                                </div>
-                            </div>
-                            <div class="faq_item">
-                                <button class="faq_item_btn">
-                                    <span class='count'>[05]</span>
-                                    <div class='name'> Комфорт</div>
-                                    <svg>
-                                        <use xlink:href="/imgs/sprite.symbol.svg#arrow_down_right">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <div class="faq_item_content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
-                                    officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia voluptatibus
-                                    veniam ipsam esse? Minus, voluptates porro.
-                                </div>
+                            <div class='result_item'>
+                                <span class='number'><span data-from="0" data-to="600000">600 000</span>+</span>
+                                Клиентов
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <section class="result" id="result">
-        <div class="container">
-            <div class='result_block'>
-                <div class='result_block_left'>
-                    <h3>Результат</h3>
-                    <h2>Цифры которые говорят за нас</h2>
-                    <div>Мы гордимся количеством успешных наших сделок, ведь именно столько раз мы смогли помочь Вам. Мы
-                        всегда идем на встречу нашим любимым клиентам и&nbsp;находим решение даже в самых сложных
-                        ситуациях.
-                        Еще текст в этом блоке.
-                    </div>
-                    <div class='result_list' data-module="countup">
-                        <div class='result_item'>
-                            <span class='number'><span data-countup-number="130">130</span>+</span>
-                            Отделений по РК
-                        </div>
-                        <div class='result_item'>
-                            <span class='number'><span data-countup-number="1,222222">1 222 222</span>+</span>
-                            Сделок совершено
-                        </div>
-                        <div class='result_item'>
-                            <span class='number'><span data-countup-number="600000">600 000</span>+</span>
-                            Клиентов
-                        </div>
-                    </div>
-                </div>
-                <div class="result_block_right">
-                    <div class='result_slider swiper'>
-                        <div class='swiper-wrapper'>
-                            <div class='swiper-slide'>
-                                <div class='result_slider_block_wrapper'>
+                    <div class="result_block_right">
+                        <div class='result_slider swiper'>
+                            <div class='swiper-wrapper'>
+                                <div class='swiper-slide'>
                                     <div class='result_slider_block'>
                                         <div class='stars_list'>
                                             <svg>
@@ -244,14 +288,13 @@
                                                 </use>
                                             </svg>
                                         </div>
-                                        <div class='result_slider_title'>Входим в <span class='color_yellow'>ТОП
+                                        <div class='result_slider_title'>Входим в <span>ТОП
                                                 лучших</span> МФО Казахстана</div>
-                                        <div class='result_slider_text'>по мнению vsezaimy.kz на октябрь 2023 года</div>
+                                        <div class='result_slider_text'>по мнению vsezaimy.kz на октябрь 2023 года
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='swiper-slide'>
-                                <div class='result_slider_block_wrapper'>
+                                <div class='swiper-slide'>
                                     <div class='result_slider_block'>
                                         <div class='stars_list'>
                                             <svg>
@@ -280,432 +323,447 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="company" id="company">
-        <div class='company_bg_img bg_img'><img src="/imgs/building_2.jpg" alt=""></div>
-        <div class="container">
-            <div class='company_block'>
-                <div class='company_block_left'>
-                    <div class='company_block_sticky'>
-                        <h3>О группе компаний</h3>
-                        <div class='company_title'>Группа компаний <span class='color_yellow'>«Сейф Group»</span>
-                            включает в
-                            себя
-                            несколько направлений в бизнесе. Мы предлагаем услуги еще какой то текст и мысли.</div>
-                    </div>
-                </div>
-                <!-- Здесь по стилям у 4 и 5 больше лого, по вестке - у 4 и 5 блока есть доп картинки -->
-                <div class='company_block_right'>
-                    <div class='company_list'>
-                        <div class='company_col'>
-                            <a href="#modal_lombard" class="company_item modal-button">
-                                <div class='company_logo'><img src="/imgs/logos_1.svg" alt=""></div>
-                                <div class='company_item_separate'></div>
-                                <div class='title'>«Сейф Ломбард»</div>
-                                <div class='text'>Это финансовая компания, предлагающая клиентам возможность
-                                    получить краткосрочные микрокредиты, заложив в качестве гарантии свои ценные золотые
-                                    изделия и смартфоны.</div>
-                                <div class='link'>Подробнее</div>
-                            </a>
-                        </div>
-                        <div class='company_col'>
-                            <a href="#modal_lombard" class="company_item modal-button">
-                                <div class='company_logo'><img src="/imgs/logos_2.svg" alt=""></div>
-                                <div class='company_item_separate'></div>
-                                <div class='title'>«Сейф Автоломбард»</div>
-                                <div class='text'>Это компания, специализирующаяся на&nbsp;предоставлении микрокредитов,
-                                    где
-                                    клиенты могут использовать свои собственные автомобили в качестве залога.</div>
-                                <div class='link'>Подробнее</div>
-                            </a>
-                        </div>
-                        <div class='company_col'>
-                            <a href="#modal_lombard" class="company_item modal-button">
-                                <div class='company_logo'><img src="/imgs/logos_3.svg" alt=""></div>
-                                <div class='company_item_separate'></div>
-                                <div class='title'>«Сейф Car»</div>
-                                <div class='text'>Предоставляет клиентам возможность арендовать автомобили
-                                    с&nbsp;гибкими
-                                    условиями и опцией последующего выкупа.</div>
-                                <div class='link'>Подробнее</div>
-                            </a>
-                        </div>
-                        <div class='company_col'>
-                            <a href="#modal_lombard" class="company_item modal-button">
-                                <div class='company_logo'>
-                                    <img src="/imgs/logos_4.svg" alt="">
-                                    <img src="/imgs/logos_4.1.svg" alt="">
-                                </div>
-                                <div class='company_item_separate'></div>
-                                <div class='title'>«CashDrive»</div>
-                                <div class='text'>Инновационный онлайн-сервис микрокредитования, предоставляющий
-                                    клиентам возможность использовать свой собственный автомобиль в&nbsp;качестве залога
-                                    для
-                                    получения финансирования.</div>
-                                <div class='link'>Подробнее</div>
-                            </a>
-                        </div>
-                        <div class='company_col'>
-                            <a href="#modal_lombard" class="company_item modal-button">
-                                <div class='company_logo'>
-                                    <img src="/imgs/logos_5.svg" alt="">
-                                    <img src="/imgs/logos_5.1.svg" alt="">
-                                </div>
-                                <div class='company_item_separate'></div>
-                                <div class='title'>МФО «Береке»</div>
-                                <div class='text'>Это финансовая организация, специализирующаяся на предоставлении
-                                    финансовой поддержки предпринимателям в разных отраслях, включая сельское хозяйство,
-                                    аграрный сектор и сферу торговли.</div>
-                                <div class='link'>Подробнее</div>
-                            </a>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="mission" id="mission">
-        <div class="container">
-            <div class='mission_block'>
-                <div class='mission_block_left'>
-                    <svg width="453" height="376" viewBox="0 0 453 376" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M352.977 180.67V375.997H292.041V227.829C312.288 213.894 332.697 198.229 352.977 180.67Z"
-                            fill="url(#paint0_linear_4438_8153)" />
-                        <path
-                            d="M449.408 79.0415V375.996H388.473V147.74C409.242 127.114 429.651 104.269 449.408 79.0415Z"
-                            fill="url(#paint1_linear_4438_8153)" />
-                        <path
-                            d="M256.544 250.674V375.964H195.608V283.376C215.332 274.042 235.742 263.207 256.544 250.674Z"
-                            fill="url(#paint2_linear_4438_8153)" />
-                        <path
-                            d="M160.111 298.942V375.963H99.1758V320.351C117.888 314.77 138.363 307.786 160.111 298.942Z"
-                            fill="url(#paint3_linear_4438_8153)" />
-                        <path
-                            d="M63.6787 329.816V375.963H2.74316V340.651C14.7931 339.346 36.0193 336.376 63.6787 329.816Z"
-                            fill="url(#paint4_linear_4438_8153)" />
-                        <path fill="url(#animation2)"
-                            d="M453.639 48.8379L444.789 0.960938L396.916 9.80528L380.327 33.8906L414.289 27.5919C391.854 58.4981 367.101 87.7726 340.127 114.958L328.371 126.348C326.412 128.241 324.453 130.167 322.461 132.027L316.387 137.51C312.305 141.165 308.321 144.885 304.206 148.475L291.699 159.082C274.816 172.985 257.476 186.398 239.417 198.833C221.391 211.3 202.875 223.114 183.805 234.047C164.701 244.915 145.173 254.999 125.188 264.235C105.202 273.471 84.8251 281.826 64.0561 289.267C43.287 296.643 22.2241 303.366 0.638672 308.065C22.4527 304.377 43.8748 298.666 65.0684 292.269C86.2293 285.742 107.064 278.105 127.571 269.653C148.079 261.167 168.195 251.801 187.952 241.586C207.676 231.338 226.91 220.144 245.687 208.232C283.274 184.375 318.444 156.667 351.198 126.283C379.967 99.0972 406.68 69.627 430.714 38.068L437.148 72.9232L453.639 48.8379Z"
-                            fill="black" />
-                        <path d="M396.909 9.8125L444.789 0.964844L414.298 27.5898L380.337 33.8737L396.909 9.8125Z"
-                            fill="url(#animation2)" />
-                        <path d="M453.645 48.8359L444.789 0.960938L430.719 38.0739L437.153 72.9141L453.645 48.8359Z"
-                            fill="url(#animation2)" />
-                        <defs>
-                            <linearGradient id="animation2" x1="453" y1="-0.00339808" x2="0.17264" y2="307.065"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#FFCF00" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#FFCF00">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                            <animate id="animation3" dur="2s" attributeName="offset" fill="freeze" begin="4s" from="1"
-                                to="0" />
-                            <linearGradient id="paint0_linear_4438_8153" x1="322.509" y1="180.67" x2="322.509"
-                                y2="375.997" gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#41434B" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#41434B">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_4438_8153" x1="418.94" y1="79.0415" x2="418.94"
-                                y2="375.996" gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#41434B" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#41434B">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                            <linearGradient id="paint2_linear_4438_8153" x1="226.076" y1="250.674" x2="226.076"
-                                y2="375.964" gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#41434B" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#41434B">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                            <linearGradient id="paint3_linear_4438_8153" x1="129.644" y1="298.942" x2="129.644"
-                                y2="375.963" gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#41434B" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#41434B">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                            <linearGradient id="paint4_linear_4438_8153" x1="33.2109" y1="329.816" x2="33.2109"
-                                y2="375.963" gradientUnits="userSpaceOnUse">
-                                <stop offset="1" stop-color="#41434B" stop-opacity="0">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                                <stop offset="0" stop-color="#41434B">
-                                    <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
-                                </stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class='mission_block_right'>
-                    <div class='mission_quote'>
-                        <div class='text quote_text'><span>Группа компаний «Сейф&nbsp;Group» –</span>
-                            предоставляет продукты для&nbsp;решения
-                            финансовых потребностей в&nbsp;сфере
-                            жизни и&nbsp;улучшения бизнеса</div>
-                        <div class='signature'>Миссия группы компаний «Сейф Ломбард»</div>
+        </section>
+        <section class="company section" id="company">
+            <div class='company_bg_img bg_img'><img src="/imgs/building_2.jpg" alt=""></div>
+            <div class="container">
+                <div class='company_block'>
+                    <div class='company_block_left'>
+                        <div class='company_block_sticky'>
+                            <h3>О группе компаний</h3>
+                            <div class='company_title'>Группа компаний <span class='color_yellow'>«Сейф Group»</span>
+                                включает в
+                                себя
+                                несколько направлений в бизнесе. Мы предлагаем услуги еще какой то текст и мысли.</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partners" id="partners">
-        <div class="container">
-            <div class='slider_top'>
-                <div>
-                    <h3>Нам доверяют</h3>
-                    <h2>Партнеры</h2>
-                </div>
-                <div class='arrows'>
-                    <div class="partners_btn_prev swiper-button-prev"><svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_left"></use>
-                        </svg></div>
-                    <div class="partners_btn_next swiper-button-next"><svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_right"></use>
-                        </svg></div>
-                </div>
-            </div>
-        </div>
-        <div class="partners_slider_wrapper">
-            <div class='container'>
-                <div class='partners_slider swiper'>
-                    <div class='swiper-wrapper'>
-                        <div class='swiper-slide'>
-                            <div class='partners_item'>
-                                <div class='partners_item_img'><img src="/imgs/slider_logo_1.svg" alt=""></div>
+                    <!-- Здесь по стилям у 4 и 5 больше лого, по вестке - у 4 и 5 блока есть доп картинки -->
+                    <div class='company_block_right'>
+                        <div class='company_list'>
+                            <div class='company_col'>
+                                <a href="#modal_lombard" class="company_item modal-button">
+                                    <div class='company_logo'><img src="/imgs/logos_1.svg" alt=""></div>
+                                    <div class='company_item_separate'></div>
+                                    <div class='title'>«Сейф Ломбард»</div>
+                                    <div class='text'>Это финансовая компания, предлагающая клиентам возможность
+                                        получить краткосрочные микрокредиты, заложив в качестве гарантии свои ценные
+                                        золотые
+                                        изделия и смартфоны.</div>
+                                    <div class='link'>Подробнее</div>
+                                </a>
                             </div>
-                        </div>
-                        <div class='swiper-slide'>
-                            <div class='partners_item'>
-                                <div class='partners_item_img'><img src="/imgs/slider_logo_2.svg" alt=""></div>
+                            <div class='company_col'>
+                                <a href="#modal_lombard" class="company_item modal-button">
+                                    <div class='company_logo'><img src="/imgs/logos_2.svg" alt=""></div>
+                                    <div class='company_item_separate'></div>
+                                    <div class='title'>«Сейф Автоломбард»</div>
+                                    <div class='text'>Это компания, специализирующаяся на&nbsp;предоставлении
+                                        микрокредитов,
+                                        где
+                                        клиенты могут использовать свои собственные автомобили в качестве залога.</div>
+                                    <div class='link'>Подробнее</div>
+                                </a>
                             </div>
-                        </div>
-                        <div class='swiper-slide'>
-                            <div class='partners_item'>
-                                <div class='partners_item_img'><img src="/imgs/slider_logo_3.svg" alt=""></div>
+                            <div class='company_col'>
+                                <a href="#modal_lombard" class="company_item modal-button">
+                                    <div class='company_logo'><img src="/imgs/logos_3.svg" alt=""></div>
+                                    <div class='company_item_separate'></div>
+                                    <div class='title'>«Сейф Car»</div>
+                                    <div class='text'>Предоставляет клиентам возможность арендовать автомобили
+                                        с&nbsp;гибкими
+                                        условиями и опцией последующего выкупа.</div>
+                                    <div class='link'>Подробнее</div>
+                                </a>
                             </div>
-                        </div>
-                        <div class='swiper-slide'>
-                            <div class='partners_item'>
-                                <div class='partners_item_img'><img src="/imgs/slider_logo_4.svg" alt=""></div>
+                            <div class='company_col'>
+                                <a href="#modal_lombard" class="company_item modal-button">
+                                    <div class='company_logo'>
+                                        <img src="/imgs/logos_4.svg" alt="">
+                                        <img src="/imgs/logos_4.1.svg" alt="">
+                                    </div>
+                                    <div class='company_item_separate'></div>
+                                    <div class='title'>«CashDrive»</div>
+                                    <div class='text'>Инновационный онлайн-сервис микрокредитования, предоставляющий
+                                        клиентам возможность использовать свой собственный автомобиль в&nbsp;качестве
+                                        залога
+                                        для
+                                        получения финансирования.</div>
+                                    <div class='link'>Подробнее</div>
+                                </a>
                             </div>
-                        </div>
-                        <div class='swiper-slide'>
-                            <div class='partners_item'>
-                                <div class='partners_item_img'><img src="/imgs/slider_logo_5.svg" alt=""></div>
+                            <div class='company_col'>
+                                <a href="#modal_lombard" class="company_item modal-button">
+                                    <div class='company_logo'>
+                                        <img src="/imgs/logos_5.svg" alt="">
+                                        <img src="/imgs/logos_5.1.svg" alt="">
+                                    </div>
+                                    <div class='company_item_separate'></div>
+                                    <div class='title'>МФО «Береке»</div>
+                                    <div class='text'>Это финансовая организация, специализирующаяся на предоставлении
+                                        финансовой поддержки предпринимателям в разных отраслях, включая сельское
+                                        хозяйство,
+                                        аграрный сектор и сферу торговли.</div>
+                                    <div class='link'>Подробнее</div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="people" id="people">
-        <div class='people_bg_img bg_img'><img src="/imgs/building_3.jpg" alt=""></div>
-        <div class="container">
-            <div class='people_block'>
-                <div class='people_block_left'>
-                    <div class='people_photo'><img src="/imgs/people.jpg" alt=""></div>
-                </div>
-                <div class='people_block_right'>
-                    <div class='people_quote'>
-                        <div class='text quote_text'>Прежде всего, синтетическое тестирование говорит
-                            о&nbsp;развития
-                            общества. Задача организации, в&nbsp;особенности же постоянное
-                            информационно-пропагандистское
-                            обеспечение нашей деятельности создаёт предпосылки для системы обучения кадров,
-                            соответствующей насущным потребностям.</div>
-                        <div class='signature'>
-                            <span class='autor'>Константин Константинопольский</span>
-                            <span class='signature_text'>председатель правления «Сейф Group»</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="administration" id="administration">
-        <div class="container">
-            <div class='slider_top'>
-                <div>
-                    <h3>Топ менеджеры</h3>
-                    <h2>Руководство</h2>
-                </div>
-                <div class='arrows'>
-                    <div class="administration_btn_prev swiper-button-prev"><svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_left"></use>
-                        </svg></div>
-                    <div class="administration_btn_next swiper-button-next"><svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_right"></use>
-                        </svg></div>
-                </div>
-            </div>
-        </div>
-        <div class="administration_slider_wrapper">
-            <div class='container'>
-                <div class='administration_slider swiper'>
-                    <div class='swiper-wrapper'>
-                        <div class='swiper-slide'>
-                            <a href="#modal_people" class='administration_item modal-button'>
-                                <div class='administration_item_bg'><img src="/imgs/slider_1.jpg" alt=""></div>
-                                <div class='administration_item_bg_yellow'></div>
-                                <div class='administration_item_people'><img src="/imgs/people_slider_1.png" alt="">
-                                </div>
-                                <div class='administration_item_text'>
-                                    <div class='name'><b>Роман</b> Стригоцкий</div>
-                                    <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
-                                        ломбард» </div>
-                                </div>
-                                <div class='administration_item_logo'><img src="/imgs/logos_1.svg" alt=""></div>
-                            </a>
-                        </div>
-                        <div class='swiper-slide'>
-                            <a href="#modal_people" class='administration_item modal-button'>
-                                <div class='administration_item_bg'><img src="/imgs/slider_2.jpg" alt=""></div>
-                                <div class='administration_item_bg_yellow'></div>
-                                <div class='administration_item_people'><img src="/imgs/people_slider_2.png" alt="">
-                                </div>
-                                <div class='administration_item_text'>
-                                    <div class='name'><b>Евгений</b> Марков</div>
-                                    <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
-                                        Автоомбард»</div>
-                                </div>
-                                <div class='administration_item_logo'><img src="/imgs/logos_2.svg" alt=""></div>
-                            </a>
-                        </div>
-                        <div class='swiper-slide'>
-                            <a href="#modal_people" class='administration_item modal-button'>
-                                <div class='administration_item_bg'><img src="/imgs/slider_3.jpg" alt=""></div>
-                                <div class='administration_item_bg_yellow'></div>
-                                <div class='administration_item_people'><img src="/imgs/people_slider_3.png" alt="">
-                                </div>
-                                <div class='administration_item_text'>
-                                    <div class='name'><b>Александр</b> Марков</div>
-                                    <div class='post'><span class='color_yellow'>–</span> управляющий партнер МФО
-                                        «Береке»</div>
-                                </div>
-                                <div class='administration_item_logo'><img src="/imgs/logos_5.svg" alt=""></div>
-                            </a>
-                        </div>
-                        <div class='swiper-slide'>
-                            <a href="#modal_people" class='administration_item modal-button'>
-                                <div class='administration_item_bg'><img src="/imgs/slider_4.jpg" alt=""></div>
-                                <div class='administration_item_bg_yellow'></div>
-                                <div class='administration_item_people'><img src="/imgs/people_slider_4.png" alt="">
-                                </div>
-                                <div class='administration_item_text'>
-                                    <div class='name'><b>Александр</b> Марков</div>
-                                    <div class='post'><span class='color_yellow'>–</span> управляющий партнер
-                                        «SeifCar»</div>
-                                </div>
-                                <div class='administration_item_logo'><img src="/imgs/logos_3.svg" alt=""></div>
-                            </a>
-                        </div>
-                        <div class='swiper-slide'>
-                            <a href="#modal_people" class='administration_item modal-button'>
-                                <div class='administration_item_bg'><img src="/imgs/slider_1.jpg" alt=""></div>
-                                <div class='administration_item_bg_yellow'></div>
-                                <div class='administration_item_people'><img src="/imgs/people_slider_1.png" alt="">
-                                </div>
-                                <div class='administration_item_text'>
-                                    <div class='name'><b>Роман</b> Стригоцкий</div>
-                                    <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
-                                        ломбард» </div>
-                                </div>
-                                <div class='administration_item_logo'><img src="/imgs/logos_4.svg" alt=""></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <footer class='footer' id="contacts">
-        <div class='container'>
-            <div class='footer_top'>
-                <div class='footer_col footer_col_logo'>
-                    <div class='logo'>
-                        <img src="/imgs/logo.svg" alt="">
-                    </div>
-                </div>
-                <div class='footer_col footer_col_link'>
-                    <div class='footer_link'>
-                        <span class='name'>Почта</span>
-                        <a href="mailto:info@seifgroup.kz"><span>info</span>@seifgroup.kz</a>
-                    </div>
-                    <div class='footer_link'>
-                        <span class='name'>Телефон</span>
-                        <a href="tel:8 (800) 800-00-00">8 <span>(800)</span> 800-00-00</a>
-                    </div>
-                </div>
-                <div class='footer_col footer_col_menu'>
-                    <nav class="menu">
-                        <ul class="menu_list">
-                            <li>
-                                <a href="#about">Главная</a>
-                            </li>
-                            <li>
-                                <a href="#about">О нас</a>
-                            </li>
-                            <li class="active">
-                                <a href="#result">Результат</a>
-                            </li>
-                            <li>
-                                <a href="#company">Наши компании</a>
-                            </li>
-                            <li>
-                                <a href="#mission">Миссия</a>
-                            </li>
-                            <li>
-                                <a href="#administration">Руководство</a>
-                            </li>
-                            <li>
-                                <a href="#contacts">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class='footer_col'>
-                    <div class='arrow scrollup'>
-                        <svg>
-                            <use xlink:href="/imgs/sprite.symbol.svg#arrow_down"></use>
+        </section>
+        <section class="mission" id="mission">
+            <div class="container">
+                <div class='mission_block'>
+                    <div class='mission_block_left'>
+                        <svg width="453" height="376" viewBox="0 0 453 376" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M352.977 180.67V375.997H292.041V227.829C312.288 213.894 332.697 198.229 352.977 180.67Z"
+                                fill="url(#paint0_linear_4438_8153)" />
+                            <path
+                                d="M449.408 79.0415V375.996H388.473V147.74C409.242 127.114 429.651 104.269 449.408 79.0415Z"
+                                fill="url(#paint1_linear_4438_8153)" />
+                            <path
+                                d="M256.544 250.674V375.964H195.608V283.376C215.332 274.042 235.742 263.207 256.544 250.674Z"
+                                fill="url(#paint2_linear_4438_8153)" />
+                            <path
+                                d="M160.111 298.942V375.963H99.1758V320.351C117.888 314.77 138.363 307.786 160.111 298.942Z"
+                                fill="url(#paint3_linear_4438_8153)" />
+                            <path
+                                d="M63.6787 329.816V375.963H2.74316V340.651C14.7931 339.346 36.0193 336.376 63.6787 329.816Z"
+                                fill="url(#paint4_linear_4438_8153)" />
+                            <path fill="url(#animation2)"
+                                d="M453.639 48.8379L444.789 0.960938L396.916 9.80528L380.327 33.8906L414.289 27.5919C391.854 58.4981 367.101 87.7726 340.127 114.958L328.371 126.348C326.412 128.241 324.453 130.167 322.461 132.027L316.387 137.51C312.305 141.165 308.321 144.885 304.206 148.475L291.699 159.082C274.816 172.985 257.476 186.398 239.417 198.833C221.391 211.3 202.875 223.114 183.805 234.047C164.701 244.915 145.173 254.999 125.188 264.235C105.202 273.471 84.8251 281.826 64.0561 289.267C43.287 296.643 22.2241 303.366 0.638672 308.065C22.4527 304.377 43.8748 298.666 65.0684 292.269C86.2293 285.742 107.064 278.105 127.571 269.653C148.079 261.167 168.195 251.801 187.952 241.586C207.676 231.338 226.91 220.144 245.687 208.232C283.274 184.375 318.444 156.667 351.198 126.283C379.967 99.0972 406.68 69.627 430.714 38.068L437.148 72.9232L453.639 48.8379Z"
+                                fill="black" />
+                            <path d="M396.909 9.8125L444.789 0.964844L414.298 27.5898L380.337 33.8737L396.909 9.8125Z"
+                                fill="url(#animation2)" />
+                            <path d="M453.645 48.8359L444.789 0.960938L430.719 38.0739L437.153 72.9141L453.645 48.8359Z"
+                                fill="url(#animation2)" />
+                            <defs>
+                                <linearGradient id="animation2" x1="453" y1="-0.00339808" x2="0.17264" y2="307.065"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#FFCF00" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#FFCF00">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                                <animate id="animation3" dur="2s" attributeName="offset" fill="freeze" begin="4s"
+                                    from="1" to="0" />
+                                <linearGradient id="paint0_linear_4438_8153" x1="322.509" y1="180.67" x2="322.509"
+                                    y2="375.997" gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#41434B" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#41434B">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_4438_8153" x1="418.94" y1="79.0415" x2="418.94"
+                                    y2="375.996" gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#41434B" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#41434B">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_4438_8153" x1="226.076" y1="250.674" x2="226.076"
+                                    y2="375.964" gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#41434B" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#41434B">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_4438_8153" x1="129.644" y1="298.942" x2="129.644"
+                                    y2="375.963" gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#41434B" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#41434B">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                                <linearGradient id="paint4_linear_4438_8153" x1="33.2109" y1="329.816" x2="33.2109"
+                                    y2="375.963" gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#41434B" stop-opacity="0">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                    <stop offset="0" stop-color="#41434B">
+                                        <animate dur="1s" attributeName="offset" fill="freeze" from="1" to="0" />
+                                    </stop>
+                                </linearGradient>
+                            </defs>
                         </svg>
                     </div>
+                    <div class='mission_block_right'>
+                        <div class='mission_quote'>
+                            <div class='text quote_text'><span>Группа компаний «Сейф&nbsp;Group» –</span>
+                                предоставляет продукты для&nbsp;решения
+                                финансовых потребностей в&nbsp;сфере
+                                жизни и&nbsp;улучшения бизнеса</div>
+                            <div class='signature'>Миссия группы компаний «Сейф Ломбард»</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class='footer_bottom'>
-                <div class='footer_bottom_text'>© 2001 – 2023 «Сейф Group»</div>
-                <div class='link_wrapper'>
-                    <a href="#" class='footer_bottom_text link'>In English</a>
-                    <a href="#" class='footer_bottom_text link'>Қазақ Тілінде</a>
-                    <a href="#" class='footer_bottom_text link'>Политика конфиденциальности</a>
-                </div>
-                <div class='footer_bottom_logo_wrapper'>
-                    <a href="#" class='footer_bottom_logo'><img src="/imgs/wemake.svg" alt=""><img
-                            src="/imgs/wemake_grey.svg" alt=""></a>
+        </section>
+        <section class="partners" id="partners">
+            <div class="container">
+                <div class='slider_top'>
+                    <div>
+                        <h3>Нам доверяют</h3>
+                        <h2>Партнеры</h2>
+                    </div>
+                    <div class='arrows'>
+                        <div class="partners_btn_prev swiper-button-prev"><svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_left"></use>
+                            </svg></div>
+                        <div class="partners_btn_next swiper-button-next"><svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_right"></use>
+                            </svg></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="partners_slider_wrapper">
+                <div class='container'>
+                    <div class='partners_slider swiper'>
+                        <div class='swiper-wrapper'>
+                            <div class='swiper-slide'>
+                                <div class='partners_item_wrapper'>
+                                    <div class='partners_item'>
+                                        <div class='partners_item_img'><img src="/imgs/slider_logo_1.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide'>
+                                <div class='partners_item_wrapper'>
+                                    <div class='partners_item'>
+                                        <div class='partners_item_img'><img src="/imgs/slider_logo_2.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide'>
+                                <div class='partners_item_wrapper'>
+                                    <div class='partners_item'>
+                                        <div class='partners_item_img'><img src="/imgs/slider_logo_3.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide'>
+                                <div class='partners_item_wrapper'>
+                                    <div class='partners_item'>
+                                        <div class='partners_item_img'><img src="/imgs/slider_logo_4.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide'>
+                                <div class='partners_item_wrapper'>
+                                    <div class='partners_item'>
+                                        <div class='partners_item_img'><img src="/imgs/slider_logo_5.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="people section" id="people">
+            <div class='people_bg_img bg_img'><img src="/imgs/building_3.jpg" alt=""></div>
+            <div class="container">
+                <div class='people_block'>
+                    <div class='people_block_left'>
+                        <div class='people_photo'><img src="/imgs/people.jpg" alt=""></div>
+                    </div>
+                    <div class='people_block_right'>
+                        <div class='people_quote'>
+                            <div class='text quote_text'>Прежде всего, синтетическое тестирование говорит
+                                о&nbsp;развития
+                                общества. Задача организации, в&nbsp;особенности же постоянное
+                                информационно-пропагандистское
+                                обеспечение нашей деятельности создаёт предпосылки для системы обучения кадров,
+                                соответствующей насущным потребностям.</div>
+                            <div class='signature'>
+                                <span class='autor'>Константин <br> Константинопольский</span>
+                                <span class='signature_text'>председатель правления «Сейф Group»</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="administration" id="administration">
+            <div class="container">
+                <div class='slider_top'>
+                    <div>
+                        <h3>Топ менеджеры</h3>
+                        <h2>Руководство</h2>
+                    </div>
+                    <div class='arrows'>
+                        <div class="administration_btn_prev swiper-button-prev"><svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_left"></use>
+                            </svg></div>
+                        <div class="administration_btn_next swiper-button-next"><svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_right"></use>
+                            </svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="administration_slider_wrapper">
+                <div class='container'>
+                    <div class='administration_slider swiper'>
+                        <div class='swiper-wrapper'>
+                            <div class='swiper-slide'>
+                                <a href="#modal_people" class='administration_item modal-button'>
+                                    <div class='administration_item_bg'><img src="/imgs/slider_1.jpg" alt=""></div>
+                                    <div class='administration_item_bg_yellow'></div>
+                                    <div class='administration_item_people'><img src="/imgs/people_slider_1.png" alt="">
+                                    </div>
+                                    <div class='administration_item_text'>
+                                        <div class='name'><b>Роман</b> Стригоцкий</div>
+                                        <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
+                                            ломбард» </div>
+                                    </div>
+                                    <div class='administration_item_logo'><img src="/imgs/logos_1.svg" alt=""></div>
+                                </a>
+                            </div>
+                            <div class='swiper-slide'>
+                                <a href="#modal_people" class='administration_item modal-button'>
+                                    <div class='administration_item_bg'><img src="/imgs/slider_2.jpg" alt=""></div>
+                                    <div class='administration_item_bg_yellow'></div>
+                                    <div class='administration_item_people'><img src="/imgs/people_slider_2.png" alt="">
+                                    </div>
+                                    <div class='administration_item_text'>
+                                        <div class='name'><b>Евгений</b> Марков</div>
+                                        <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
+                                            Автоомбард»</div>
+                                    </div>
+                                    <div class='administration_item_logo'><img src="/imgs/logos_2.svg" alt=""></div>
+                                </a>
+                            </div>
+                            <div class='swiper-slide'>
+                                <a href="#modal_people" class='administration_item modal-button'>
+                                    <div class='administration_item_bg'><img src="/imgs/slider_3.jpg" alt=""></div>
+                                    <div class='administration_item_bg_yellow'></div>
+                                    <div class='administration_item_people'><img src="/imgs/people_slider_3.png" alt="">
+                                    </div>
+                                    <div class='administration_item_text'>
+                                        <div class='name'><b>Александр</b> Марков</div>
+                                        <div class='post'><span class='color_yellow'>–</span> управляющий партнер МФО
+                                            «Береке»</div>
+                                    </div>
+                                    <div class='administration_item_logo'><img src="/imgs/logos_5.svg" alt=""></div>
+                                </a>
+                            </div>
+                            <div class='swiper-slide'>
+                                <a href="#modal_people" class='administration_item modal-button'>
+                                    <div class='administration_item_bg'><img src="/imgs/slider_4.jpg" alt=""></div>
+                                    <div class='administration_item_bg_yellow'></div>
+                                    <div class='administration_item_people'><img src="/imgs/people_slider_4.png" alt="">
+                                    </div>
+                                    <div class='administration_item_text'>
+                                        <div class='name'><b>Александр</b> Марков</div>
+                                        <div class='post'><span class='color_yellow'>–</span> управляющий партнер
+                                            «SeifCar»</div>
+                                    </div>
+                                    <div class='administration_item_logo'><img src="/imgs/logos_3.svg" alt=""></div>
+                                </a>
+                            </div>
+                            <div class='swiper-slide'>
+                                <a href="#modal_people" class='administration_item modal-button'>
+                                    <div class='administration_item_bg'><img src="/imgs/slider_1.jpg" alt=""></div>
+                                    <div class='administration_item_bg_yellow'></div>
+                                    <div class='administration_item_people'><img src="/imgs/people_slider_1.png" alt="">
+                                    </div>
+                                    <div class='administration_item_text'>
+                                        <div class='name'><b>Роман</b> Стригоцкий</div>
+                                        <div class='post'><span class='color_yellow'>–</span> управляющий партнер «Сейф
+                                            ломбард» </div>
+                                    </div>
+                                    <div class='administration_item_logo'><img src="/imgs/logos_4.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer class='footer' id="contacts">
+            <div class='container'>
+                <div class='footer_top'>
+                    <div class='footer_col footer_col_logo'>
+                        <div class='logo'>
+                            <img src="/imgs/logo.svg" alt="">
+                        </div>
+                    </div>
+                    <div class='footer_col'>
+                        <div class='footer_link'>
+                            <span class='name'>Почта</span>
+                            <a href="mailto:info@seifgroup.kz"><span>info</span>@seifgroup.kz</a>
+                        </div>
+                        <div class='footer_link'>
+                            <span class='name'>Телефон</span>
+                            <a href="tel:8 (800) 800-00-00">8 <span>(800)</span> 800-00-00</a>
+                        </div>
+                    </div>
+                    <div class='footer_col footer_col_menu'>
+                        <nav class="menu">
+                            <ul class="menu_list">
+                                <li>
+                                    <a href="#about">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="#about">О нас</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#result">Результат</a>
+                                </li>
+                                <li>
+                                    <a href="#company">Наши компании</a>
+                                </li>
+                                <li>
+                                    <a href="#mission">Миссия</a>
+                                </li>
+                                <li>
+                                    <a href="#administration">Руководство</a>
+                                </li>
+                                <li>
+                                    <a href="#contacts">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class='footer_col'>
+                        <div class='arrow scrollup'>
+                            <svg>
+                                <use xlink:href="/imgs/sprite.symbol.svg#arrow_down"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class='footer_bottom'>
+                    <div class='footer_bottom_text'>© 2001 – 2023 «Сейф Group»</div>
+                    <div class='link_wrapper'>
+                        <a href="#" class='link'>In English</a>
+                        <a href="#" class='link'>Қазақ Тілінде</a>
+                        <a href="#" class='link'>Политика конфиденциальности</a>
+                    </div>
+                    <div class='footer_bottom_logo_wrapper'>
+                        <a href="#" class='footer_bottom_logo'><img src="/imgs/wemake.svg" alt=""><img
+                                src="/imgs/wemake_grey.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
     <div class="modal" id="modal_lombard" hidden>
         <div class="modal_bg">
             <div class="modal-dialog">
@@ -805,6 +863,10 @@
 
     <script src="vendors/jquery/jquery-3.5.1.min.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="vendors/jquery.numscroll/jquery.numscroll.min.js"></script>
+
     <script src="js/common.js?1"></script>
 </body>
 
