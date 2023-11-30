@@ -808,8 +808,7 @@ main:before {
 .home {
   position: relative;
   z-index: 1;
-  height: 100dvh;
-  transition: all 0.5s ease;
+  height: 100svh;
 }
 .home .container {
   height: 100%;
