@@ -16,6 +16,13 @@ $(document).ready(function () {
         }
     });
 
+    AOS.init({
+        easing: 'ease-in-out',
+        delay: 100,
+        once: true,
+        duration: 700,
+        // disable: 'mobile'
+    });
     //Прокрутка к секции при клике из меню или на стрелку
     $('.arrow_down, .menu a').on('click', function () {
         let href = $(this).attr("href");
@@ -43,52 +50,6 @@ $(document).ready(function () {
     })
 
     //Скрыть/показать хедер при прокрутке
-
-    // $(window).scroll(function (e) {
-    //     e.preventDefault();
-    //     var header = $('.header');
-    //     var headerElem = $('.header_elem');
-
-    //     let headerHeight = header.offset().top + header.outerHeight();
-    //     console.log($(this).scrollTop(), headerHeight);
-    //     if ($(this).scrollTop() >= headerHeight) {
-    //         headerElem.addClass('fix')
-    //     } else {
-    //         $('.header_hidden').removeClass('header_hidden');
-    //         // setTimeout(() => {
-    //         headerElem.removeClass('fix');
-
-    //         // }, 2000);
-    //     }
-    // })
-    // const onScrollHeader = () => {
-    //     const header = $('.header_block_wrapper');
-    //     const sticky = $('.company_block_sticky');
-    //     let prevScroll = $(window).scrollTop();
-    //     let currentScroll;
-
-    //     $(window).scroll(() => {
-    //         currentScroll = $(window).scrollTop()
-    //         const headerHidden = () => header.hasClass('header_hidden')
-
-    //         if (currentScroll < prevScroll && !headerHidden()) {
-    //             setTimeout(() => {
-    //                 // header.addClass('aefsdgdhs');
-    //                 header.addClass('header_hidden');
-    //                 sticky.removeClass('out')
-    //             }, 0);
-    //         }
-    //         if (currentScroll > prevScroll && headerHidden()) {
-    //             // setTimeout(() => {
-    //             // header.removeClass('header_hidden');
-    //             header.removeClass('header_hidden');
-    //             sticky.addClass('out');
-    //             // }, 0);
-    //         }
-    //         prevScroll = currentScroll
-    //     })
-    // }
-    // onScrollHeader()
     let prevScroll = $(window).scrollTop();
 
     const header = document.querySelector('header');
@@ -291,5 +252,6 @@ $(document).ready(function () {
         }
 
     })
+
 
 });
