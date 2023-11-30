@@ -1,3 +1,6 @@
+$(window).on('load', function () {
+    $('main').removeClass('load')
+});
 $(document).ready(function () {
 
     $('.mobile_menu_btn').on('click', function () {
@@ -21,10 +24,13 @@ $(document).ready(function () {
         delay: 100,
         once: true,
         duration: 700,
+        offset: 100,
         // disable: 'mobile'
     });
+
     //Прокрутка к секции при клике из меню или на стрелку
-    $('.arrow_down, .menu a').on('click', function () {
+    $('.arrow_down, .menu a').on('click', function (e) {
+        e.preventDefault();
         let href = $(this).attr("href");
         $("html, body").animate({
             scrollTop: $(href).offset().top

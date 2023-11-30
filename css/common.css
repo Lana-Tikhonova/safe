@@ -409,6 +409,8 @@ button {
 
 main {
   position: relative;
+}
+main.load {
   overflow: hidden;
 }
 main:before {
@@ -2762,9 +2764,15 @@ main:before {
     height: calc(100% + 20px);
   }
 }
-main {
-  animation: 1s endAnimateTop ease-in forwards;
-  animation-delay: 4.5s;
+.header_bg_img img {
+  animation: 1.5s bgImg ease-in forwards;
+  animation-delay: 5.5s;
+  transform: scale(1.5);
+}
+.header_bg_img:before {
+  animation: 1.5s bgBefore ease-in forwards;
+  animation-delay: 5.5s;
+  opacity: 0;
 }
 
 .loader_wrapper {
@@ -2814,6 +2822,7 @@ main {
   top: -0.1em;
   transform: translate3d(0, 100%, 0);
   animation: title 0.9s ease-in-out forwards;
+  animation-delay: 6s;
 }
 .home_title .line span:first-child span {
   animation-delay: 0.2s;
@@ -2834,13 +2843,13 @@ main {
 .home_subtitle {
   transform: translateY(100%);
   animation: translateY 1.5s ease-in-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 7s;
 }
 
 .arrow {
   transform: translateY(100%);
   animation: translateY 1.5s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 7.5s;
 }
 
 @keyframes translateY {
@@ -2848,6 +2857,38 @@ main {
     transform: translateY(0);
   }
 }
+.mission_svg {
+  width: 100%;
+}
+.mission_svg svg {
+  width: 100%;
+}
+.mission_svg.aos-animate #anim_path_arrow {
+  animation: animArrow 1.5s ease-in-out forwards;
+}
+.mission_svg.aos-animate #anim_path_1,
+.mission_svg.aos-animate #anim_path_2,
+.mission_svg.aos-animate #anim_path_3,
+.mission_svg.aos-animate #anim_path_4,
+.mission_svg.aos-animate #anim_path_5 {
+  animation: animLine 1.5s ease-in-out forwards;
+}
+.mission_svg.aos-animate #anim_path_1 {
+  animation-delay: 0.1s;
+}
+.mission_svg.aos-animate #anim_path_2 {
+  animation-delay: 0.3s;
+}
+.mission_svg.aos-animate #anim_path_3 {
+  animation-delay: 0.5s;
+}
+.mission_svg.aos-animate #anim_path_4 {
+  animation-delay: 0.7s;
+}
+.mission_svg.aos-animate #anim_path_5 {
+  animation-delay: 0.9s;
+}
+
 #anim_path_1,
 #anim_path_2,
 #anim_path_3,
@@ -2857,27 +2898,6 @@ main {
   transform: translateY(100%);
   transition: all 0.5s ease;
   opacity: 0;
-  animation: animLine 1.5s ease-in-out forwards;
-}
-
-#anim_path_1 {
-  animation-delay: 0.1s;
-}
-
-#anim_path_2 {
-  animation-delay: 0.3s;
-}
-
-#anim_path_3 {
-  animation-delay: 0.5s;
-}
-
-#anim_path_4 {
-  animation-delay: 0.7s;
-}
-
-#anim_path_5 {
-  animation-delay: 0.9s;
 }
 
 @keyframes animLine {
@@ -2896,12 +2916,12 @@ main {
 #anim_path_arrow {
   will-change: transform;
   transition: all 0.5s ease;
-  animation: animArrow 1.5s ease-in-out forwards;
+  transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -455, 54, 0, 1);
 }
 
 @keyframes animArrow {
   0% {
-    transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -350, 104, 0, 1);
+    transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -455, 54, 0, 1);
   }
   100% {
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
