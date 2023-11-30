@@ -568,7 +568,7 @@ main:before {
 }
 
 .header {
-  z-index: 50;
+  z-index: 100;
   position: fixed;
   width: 100%;
   height: 100px;
@@ -1273,8 +1273,33 @@ main:before {
   overflow: hidden;
   padding: 65px 0;
   margin: -30px 0 -65px;
+  position: relative;
+}
+.partners_slider_wrapper:after, .partners_slider_wrapper:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+  width: calc(50% - 740px);
+}
+.partners_slider_wrapper:before {
+  background: linear-gradient(91deg, #1E1F22 0.75%, rgba(30, 31, 34, 0) 99.31%);
+  left: 0;
+}
+.partners_slider_wrapper:after {
+  background: linear-gradient(270deg, #1E1F22 0%, rgba(30, 31, 34, 0) 100%);
+  right: 0;
 }
 
+@media screen and (max-width: 1600px) {
+  .partners_slider_wrapper:after, .partners_slider_wrapper:before {
+    width: 50px;
+  }
+}
 .partners_slider {
   overflow: initial;
   position: relative;
@@ -1301,15 +1326,6 @@ main:before {
   width: 100%;
   height: 100%;
 }
-.partners_item:hover .partners_item_img {
-  filter: grayscale(0);
-  transform: scale(1.25);
-}
-.partners_item:hover:before {
-  border: 4px solid var(--ffcf-00, #FFCF00);
-  box-shadow: 0px 4px 32px 0px #FFCF00;
-  transition: all 0.5s ease;
-}
 .partners_item:before {
   transition: all 0.1s ease;
   content: "";
@@ -1330,7 +1346,6 @@ main:before {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
-  filter: grayscale(1);
 }
 .partners_item_img img {
   width: 100%;
@@ -2016,9 +2031,21 @@ main:before {
      object-fit: contain;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 993px) {
   .menu_list a:hover {
     font-size: 21.6px;
+  }
+  .partners_item:hover .partners_item_img {
+    filter: grayscale(0);
+    transform: scale(1.25);
+  }
+  .partners_item:hover:before {
+    border: 4px solid var(--ffcf-00, #FFCF00);
+    box-shadow: 0px 4px 32px 0px #FFCF00;
+    transition: all 0.5s ease;
+  }
+  .partners_item_img {
+    filter: grayscale(1);
   }
   .language_title:hover {
     color: #FFCF00;
@@ -2208,16 +2235,19 @@ main:before {
   }
   .mobile_menu {
     top: 0;
-    left: 0;
+    left: 100%;
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: 90;
-    display: none;
+    visibility: hidden;
+    transition: all 0.5s ease;
     background: #1E1F22;
   }
   .mobile_menu.active {
-    display: block;
+    visibility: visible;
+    left: 0;
   }
   .mobile_menu .menu {
     position: relative;
@@ -2429,6 +2459,15 @@ main:before {
   }
   .modal_people_block_right {
     width: calc(100% - 320px);
+  }
+  .partners_item:before {
+    border-radius: 61561.5px;
+    border: 2px solid var(--ffcf-00, #FFCF00);
+    box-shadow: 0px 2px 16px 0px rgba(255, 207, 0, 0.54);
+  }
+  .partners_item_img {
+    filter: grayscale(0);
+    transform: scale(1.25);
   }
 }
 @media screen and (max-width: 768px) {
@@ -2654,9 +2693,6 @@ main:before {
   .mission_block_left svg {
     height: auto;
   }
-  .partners_item:hover:before {
-    box-shadow: 0px 0px 17px 0px rgba(255, 207, 0, 0.54);
-  }
   .partners_slider_wrapper {
     padding: 34px 0 41px;
     margin: -42px 0 -41px;
@@ -2810,5 +2846,64 @@ main {
 @keyframes translateY {
   to {
     transform: translateY(0);
+  }
+}
+#anim_path_1,
+#anim_path_2,
+#anim_path_3,
+#anim_path_4,
+#anim_path_5 {
+  will-change: transform;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: animLine 1.5s ease-in-out forwards;
+}
+
+#anim_path_1 {
+  animation-delay: 0.1s;
+}
+
+#anim_path_2 {
+  animation-delay: 0.3s;
+}
+
+#anim_path_3 {
+  animation-delay: 0.5s;
+}
+
+#anim_path_4 {
+  animation-delay: 0.7s;
+}
+
+#anim_path_5 {
+  animation-delay: 0.9s;
+}
+
+@keyframes animLine {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#anim_path_arrow {
+  will-change: transform;
+  transition: all 0.5s ease;
+  animation: animArrow 1.5s ease-in-out forwards;
+}
+
+@keyframes animArrow {
+  0% {
+    transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -350, 104, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
 }

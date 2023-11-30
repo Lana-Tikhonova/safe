@@ -627,7 +627,7 @@ main {
 }
 
 .header {
-	z-index: 50;
+	z-index: 100;
 	position: fixed;
 	width: 100%;
 	height: 100px;
@@ -1439,7 +1439,42 @@ main {
 	position: relative;
 	overflow: hidden;
 	padding: 65px 0;
-	margin: -30px 0 -65px
+	margin: -30px 0 -65px;
+	position: relative;
+
+	&:after,
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 250px;
+		height: 100%;
+		z-index: 2;
+		width: calc(50% - 740px);
+	}
+
+	&:before {
+		background: linear-gradient(91deg, $color_black 0.75%, rgba(30, 31, 34, 0.00) 99.31%);
+		left: 0;
+	}
+
+	&:after {
+		background: linear-gradient(270deg, $color_black 0%, rgba(30, 31, 34, 0.00) 100%);
+		right: 0;
+	}
+
+}
+
+@media screen and (max-width:1600px) {
+	.partners_slider_wrapper {
+
+		&:after,
+		&:before {
+			width: 50px;
+		}
+	}
 }
 
 .partners_slider {
@@ -1469,23 +1504,6 @@ main {
 	width: 100%;
 	height: 100%;
 
-	&:hover {
-		// background: $color_black;
-		// z-index: 1;
-
-		.partners_item_img {
-			filter: grayscale(0);
-			transform: scale(1.25);
-		}
-
-		&:before {
-			border: 4px solid var(--ffcf-00, $color_yellow);
-			box-shadow: 0px 4px 32px 0px $color_yellow;
-			transition: $transition;
-
-		}
-	}
-
 	&:before {
 		transition: all 0.1s ease;
 
@@ -1509,7 +1527,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	transition: $transition;
-	filter: grayscale(1);
 
 	img {
 		width: 100%;
@@ -2276,11 +2293,34 @@ $animation-setting: 0.8s ease-in-out forwards;
 	}
 }
 
-@media screen and (min-width:577px) {
+@media screen and (min-width:993px) {
 	.menu_list a {
 		&:hover {
 			font-size: 21.6px;
 		}
+	}
+
+	.partners_item {
+		&:hover {
+			// background: $color_black;
+			// z-index: 1;
+
+			.partners_item_img {
+				filter: grayscale(0);
+				transform: scale(1.25);
+			}
+
+			&:before {
+				border: 4px solid var(--ffcf-00, $color_yellow);
+				box-shadow: 0px 4px 32px 0px $color_yellow;
+				transition: $transition;
+
+			}
+		}
+	}
+
+	.partners_item_img {
+		filter: grayscale(1);
 	}
 
 	.language_title {
@@ -2553,16 +2593,21 @@ $animation-setting: 0.8s ease-in-out forwards;
 
 	.mobile_menu {
 		top: 0;
-		left: 0;
+		left: 100%;
+		display: block;
 		position: fixed;
 		width: 100%;
 		height: 100%;
 		z-index: 90;
-		display: none;
+		visibility: hidden;
+		// opacity: 0;
+		transition: $transition;
 		background: $color_black;
 
 		&.active {
-			display: block;
+			visibility: visible;
+			// opacity: 1;
+			left: 0;
 		}
 
 		.menu {
@@ -2841,6 +2886,17 @@ $animation-setting: 0.8s ease-in-out forwards;
 
 	.modal_people_block_right {
 		width: calc(100% - 320px)
+	}
+
+	.partners_item:before {
+		border-radius: 61561.5px;
+		border: 2px solid var(--ffcf-00, #FFCF00);
+		box-shadow: 0px 2px 16px 0px rgb(255 207 0 / 54%);
+	}
+
+	.partners_item_img {
+		filter: grayscale(0);
+		transform: scale(1.25);
 	}
 }
 
@@ -3140,10 +3196,6 @@ $animation-setting: 0.8s ease-in-out forwards;
 		height: auto;
 	}
 
-	.partners_item:hover:before {
-		box-shadow: 0px 0px 17px 0px rgb(255 207 0 / 54%);
-	}
-
 	.partners_slider_wrapper {
 		padding: 34px 0 41px;
 		margin: -42px 0 -41px;
@@ -3356,5 +3408,77 @@ main {
 @keyframes translateY {
 	to {
 		transform: translateY(0);
+	}
+}
+
+#anim_path_1,
+#anim_path_2,
+#anim_path_3,
+#anim_path_4,
+#anim_path_5 {
+	will-change: transform;
+	transform: translateY(100%);
+	transition: $transition;
+	opacity: 0;
+	-webkit-animation: animLine 1.5s ease-in-out forwards;
+	animation: animLine 1.5s ease-in-out forwards;
+
+}
+
+#anim_path_1 {
+	animation-delay: 0.1s;
+}
+
+#anim_path_2 {
+	animation-delay: 0.3s;
+}
+
+#anim_path_3 {
+	animation-delay: 0.5s;
+}
+
+#anim_path_4 {
+	animation-delay: 0.7s;
+}
+
+#anim_path_5 {
+	animation-delay: 0.9s;
+}
+
+@keyframes animLine {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+
+	}
+}
+
+#anim_path_arrow {
+	will-change: transform;
+	transition: $transition;
+	animation: animArrow 1.5s ease-in-out forwards;
+}
+
+@keyframes animArrow {
+	0% {
+		transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -350, 104, 0, 1);
+	}
+
+
+
+	100% {
+		transform: matrix3d(1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1)
 	}
 }
