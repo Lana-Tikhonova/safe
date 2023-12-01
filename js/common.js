@@ -145,6 +145,7 @@ $(document).ready(function () {
         },
     });
 
+    // счетчик
     var counters = document.querySelectorAll('.number span'),
         len = counters.length,
         duration = 5000;
@@ -203,7 +204,6 @@ $(document).ready(function () {
             animate(i);
         }
     }
-
 
     var section = document.querySelector('.countup');
     var hasEntered = false;

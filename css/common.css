@@ -421,7 +421,7 @@ main:before {
   background: linear-gradient(180deg, #1E1F22 18.23%, rgba(30, 31, 34, 0) 100%);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1100px) {
   main {
     position: relative;
   }
