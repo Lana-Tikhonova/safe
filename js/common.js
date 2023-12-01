@@ -3,6 +3,12 @@
 // });
 $(document).ready(function () {
 
+    if ($('.youtubebg').length) {
+        jQuery(document).ready(function () {
+            jQuery('[data-youtube]').youtube_background();
+        });
+    }
+
     $('.mobile_menu_btn').on('click', function () {
         $(this).toggleClass('active');
         $('.mobile_menu').toggleClass('active');
@@ -70,7 +76,6 @@ $(document).ready(function () {
 
         let currentScroll;
         currentScroll = $(window).scrollTop()
-        console.log(currentScroll < prevScroll);
         if (currentScroll < prevScroll && header.classList.contains('fix')) {
             header.classList.add('fix-on-scroll');
             sticky.classList.add('out');
