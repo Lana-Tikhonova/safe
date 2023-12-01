@@ -40,7 +40,15 @@
 <!-- Для бэкендера: в некоторых секциях, где, возможно, блоки будут выводиться циклом, есть data-aos-delay="" с  разными значениями.  
 Вот секции где есть повторяющиеся блоки с эти атрибутом: result_list, company_list,partners_slider,administration_slider-->
 
-<body class='page_home animate_show'>
+<body class='page_home animate_show' style="overflow: hidden;">
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            setTimeout(() => {
+                const bodyVisible = document.querySelector('body');
+                bodyVisible.style.overflow = ``;
+            }, 5000);
+        });
+    </script>
     <div class='loader_wrapper'>
         <div class='loader'>
             <div class='loader_logo'>
