@@ -1544,6 +1544,8 @@ main:before {
   max-height: 378px;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .administration_item_text {
