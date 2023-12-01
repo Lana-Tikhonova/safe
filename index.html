@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, maximum-scale=1">
     <meta name="description" content="Предоставление финансовой помощи населению во всех сферах жизни" />
     <meta name="keywords" content="" />
     <title>Сейф</title>
@@ -30,12 +30,17 @@
 
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="vendors/animate/aos.min.css">
-    <link rel="stylesheet" href="css/common.css?3">
+    <link rel="stylesheet" href="css/common.css?4">
     <!-- чтобы при загрузке страницы у элементов не срабатывал transition -->
     <script> </script>
 </head>
 
-<body class='page_home'>
+<!-- Для бэкендера: Чтобы не было анимаций, убрать класс у body animate_show, только не забыть вернуть его назад  -->
+
+<!-- Для бэкендера: в некоторых секциях, где, возможно, блоки будут выводиться циклом, есть data-aos-delay="" с  разными значениями.  
+Вот секции где есть повторяющиеся блоки с эти атрибутом: result_list, company_list,partners_slider,administration_slider-->
+
+<body class='page_home animate_show'>
     <div class='loader_wrapper'>
         <div class='loader'>
             <div class='loader_logo'>
@@ -54,127 +59,8 @@
                             <div class='header_block'>
                                 <div class='logo'>
                                     <img src="imgs/logo.svg" alt="">
-                                    <!-- <div class='logo_svg_wrapper'>
-                                        <div class='logo_svg'>
-                                            <div class="logo_svg_col">
-                                                <div class='logo_svg_item'>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_s">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_s">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_s">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_s">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_s">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="logo_svg_col">
-                                                <div class='logo_svg_item'>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_e">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_e">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_e">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_e">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_e">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="logo_svg_col">
-                                                <div class='logo_svg_item'>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_i">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_i">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_i">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_i">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_i">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="logo_svg_col">
-                                                <div class='logo_svg_item'>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_f">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_f">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_f">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_f">
-                                                        </use>
-                                                    </svg>
-                                                    <svg>
-                                                        <use xlink:href="imgs/sprite.symbol.svg#logo_f">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <svg class='logo_svg_signature' width="76" height="11" viewBox="0 0 76 11"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M5.78166 11.0001C4.27818 11.0001 2.98949 10.4617 1.91558 9.49243C0.841667 8.5232 0.412109 7.2309 0.412109 5.7232C0.412109 4.21551 0.949058 2.9232 1.91558 1.95397C2.98949 0.984744 4.27819 0.446289 5.88906 0.446289C7.07036 0.446289 8.03686 0.661654 8.89599 1.20012V3.24629C7.92947 2.70783 6.96297 2.38474 5.99645 2.38474C4.92254 2.38474 4.06342 2.70781 3.41908 3.35396C2.77473 4.00011 2.45253 4.75398 2.45253 5.8309C2.45253 6.80013 2.77473 7.66165 3.41908 8.20011C4.06342 8.84627 4.81514 9.06167 5.78166 9.06167C6.64079 9.06167 7.39252 8.84628 7.82208 8.41551V4.86168H9.86254V9.38473C9.43297 9.8155 8.89601 10.2463 8.14427 10.5694C7.39254 10.8924 6.64079 11.0001 5.78166 11.0001Z"
-                                                fill="white" />
-                                            <path
-                                                d="M19.5287 10.7845H17.4883V0.553711H22.2135C23.2874 0.553711 24.1465 0.876775 24.7909 1.41524C25.4352 1.9537 25.7574 2.70754 25.7574 3.56908C25.7574 4.21524 25.5426 4.8614 25.2204 5.29217C24.8983 5.72293 24.3613 6.1537 23.717 6.36909L26.8313 10.6768H24.3613L21.3544 6.58445H19.6361V10.7845H19.5287ZM19.5287 2.49216V4.96907H21.9987C22.4283 4.96907 22.8578 4.86139 23.0726 4.646C23.2874 4.43062 23.5022 4.10755 23.5022 3.67678C23.5022 3.24601 23.3948 3.03061 23.0726 2.81522C22.8578 2.59984 22.4283 2.49216 21.9987 2.49216H19.5287Z"
-                                                fill="white" />
-                                            <path
-                                                d="M33.168 5.7232C33.168 4.21551 33.7049 2.9232 34.6714 1.95397C35.638 0.877052 36.9266 0.446289 38.4301 0.446289C39.9336 0.446289 41.2223 0.984744 42.1888 1.95397C43.1553 3.0309 43.6923 4.21551 43.6923 5.7232C43.6923 7.2309 43.1553 8.41551 42.1888 9.49243C41.2223 10.5694 39.9336 11.0001 38.4301 11.0001C36.9266 11.0001 35.638 10.4617 34.6714 9.49243C33.5975 8.41551 33.168 7.2309 33.168 5.7232ZM36.1749 8.09245C36.8193 8.7386 37.571 9.06167 38.4301 9.06167C39.2893 9.06167 40.041 8.7386 40.6853 8.09245C41.3297 7.44629 41.5445 6.69243 41.5445 5.7232C41.5445 4.75397 41.2223 4.00011 40.6853 3.35396C40.1484 2.70781 39.2893 2.38474 38.4301 2.38474C37.571 2.38474 36.8193 2.70781 36.1749 3.35396C35.5306 4.00011 35.3158 4.75397 35.3158 5.7232C35.2084 6.69243 35.5306 7.44629 36.1749 8.09245Z"
-                                                fill="white" />
-                                            <path
-                                                d="M55.3972 10.9998C54.1085 10.9998 53.0346 10.5691 52.2829 9.81522C51.5311 9.06137 51.1016 7.87678 51.1016 6.47678V0.553711H53.142V6.58445C53.142 7.3383 53.3568 7.98446 53.7863 8.41523C54.2159 8.846 54.7529 9.06139 55.3972 9.06139C56.0415 9.06139 56.6859 8.846 57.0081 8.41523C57.4376 7.98446 57.6524 7.3383 57.6524 6.58445V0.553711H59.6928V6.47678C59.6928 7.87678 59.2633 8.95368 58.5115 9.81522C57.7598 10.5691 56.6859 10.9998 55.3972 10.9998Z"
-                                                fill="white" />
-                                            <path
-                                                d="M69.681 10.7845H67.6406V0.553711H72.0437C73.1176 0.553711 73.9767 0.876775 74.621 1.41524C75.2654 1.9537 75.5876 2.70755 75.5876 3.67678C75.5876 4.64601 75.2654 5.29217 74.621 5.93833C73.9767 6.47679 73.1176 6.79985 72.0437 6.79985H69.681V10.7845ZM69.681 2.49216V5.07677H71.9363C72.4732 5.07677 72.7954 4.96909 73.1176 4.7537C73.4397 4.53832 73.5471 4.21525 73.5471 3.78448C73.5471 3.35371 73.4397 3.03061 73.1176 2.81522C72.7954 2.59984 72.4732 2.49216 71.9363 2.49216H69.681Z"
-                                                fill="white" />
-                                        </svg>
-
-                                    </div> -->
-
                                 </div>
+                                <!--  Для бэкендера: меню (.menu) дублируется 3 раза, здесь, в футере и в .mobile_menu  -->
                                 <nav class="menu">
                                     <ul class="menu_list">
                                         <li>
@@ -214,7 +100,6 @@
             </header>
             <div class='mobile_menu'>
                 <div class='mobile_menu_img bg_img'><img src="imgs/building_4.jpg" alt=""></div>
-
                 <nav class="menu">
                     <ul class="menu_list">
                         <li>
@@ -241,13 +126,13 @@
             <section class="home">
                 <div class="container">
                     <h1 class='home_title'>
-                        <div class='line'><span>Предоставление финансовой</span></div>
-                        <div class='line'><span>помощи населению</span></div>
-                        <div class='line'>
+                        <span class='line'><span>Предоставление финансовой</span></span>
+                        <span class='line'><span>помощи населению</span></span>
+                        <span class='line'>
                             <span>во всех сферах
                                 жизни
                                 <img src="imgs/arrow.svg" alt=""></span>
-                        </div>
+                        </span>
                     </h1>
                     <div class='home_bottom'>
                         <div class='home_bottom_item'>
@@ -286,14 +171,14 @@
                             <div class='faq_list'>
                                 <!-- Обратить внимание: тут у .faq_item стоит атрибут с разной задержкой data-aos-delay у каждого блока. У каждого нового блока задержка +100 -->
                                 <div class="faq_item" data-aos="fade-up" data-aos-delay="100">
-                                    <button class="faq_item_btn">
+                                    <div class="faq_item_btn">
                                         <span class='count'>[01]</span>
                                         <div class='name'> Надежность</div>
                                         <svg>
                                             <use xlink:href="imgs/sprite.symbol.svg#arrow_down_right">
                                             </use>
                                         </svg>
-                                    </button>
+                                    </div>
                                     <div class="faq_item_content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
                                         officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
@@ -302,14 +187,14 @@
                                     </div>
                                 </div>
                                 <div class="faq_item" data-aos="fade-up" data-aos-delay="200">
-                                    <button class="faq_item_btn">
+                                    <div class="faq_item_btn">
                                         <span class='count'>[02]</span>
                                         <div class='name'> Профессионализм</div>
                                         <svg>
                                             <use xlink:href="imgs/sprite.symbol.svg#arrow_down_right">
                                             </use>
                                         </svg>
-                                    </button>
+                                    </div>
                                     <div class="faq_item_content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
                                         officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
@@ -318,14 +203,14 @@
                                     </div>
                                 </div>
                                 <div class="faq_item" data-aos="fade-up" data-aos-delay="300">
-                                    <button class="faq_item_btn">
+                                    <div class="faq_item_btn">
                                         <span class='count'>[03]</span>
                                         <div class='name'> Прозрачность</div>
                                         <svg>
                                             <use xlink:href="imgs/sprite.symbol.svg#arrow_down_right">
                                             </use>
                                         </svg>
-                                    </button>
+                                    </div>
                                     <div class="faq_item_content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
                                         officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
@@ -334,14 +219,14 @@
                                     </div>
                                 </div>
                                 <div class="faq_item" data-aos="fade-up" data-aos-delay="400">
-                                    <button class="faq_item_btn">
+                                    <div class="faq_item_btn">
                                         <span class='count'>[04]</span>
                                         <div class='name'> Гибкость</div>
                                         <svg>
                                             <use xlink:href="imgs/sprite.symbol.svg#arrow_down_right">
                                             </use>
                                         </svg>
-                                    </button>
+                                    </div>
                                     <div class="faq_item_content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
                                         officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
@@ -350,14 +235,14 @@
                                     </div>
                                 </div>
                                 <div class="faq_item" data-aos="fade-up" data-aos-delay="500">
-                                    <button class="faq_item_btn">
+                                    <div class="faq_item_btn">
                                         <span class='count'>[05]</span>
                                         <div class='name'> Комфорт</div>
                                         <svg>
                                             <use xlink:href="imgs/sprite.symbol.svg#arrow_down_right">
                                             </use>
                                         </svg>
-                                    </button>
+                                    </div>
                                     <div class="faq_item_content">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione delectus a eum
                                         officiis fuga ab nobis corporis soluta iste illum, pariatur vero, quia
@@ -819,6 +704,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <footer class='footer' id="contacts" data-aos="fade-up" data-aos-delay="200">
             <div class='container'>
@@ -988,7 +874,7 @@
     <script src="vendors/jquery/jquery-3.5.1.min.js"></script>
     <script src="vendors/animate/aos.min.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="js/common.js?3"></script>
+    <script src="js/common.js?4"></script>
 </body>
 
 </html>

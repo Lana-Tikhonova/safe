@@ -1,6 +1,6 @@
-$(window).on('load', function () {
-    $('main').removeClass('load')
-});
+// $(window).on('load', function () {
+//     $('main').removeClass('load')
+// });
 $(document).ready(function () {
 
     $('.mobile_menu_btn').on('click', function () {

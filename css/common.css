@@ -410,9 +410,6 @@ button {
 main {
   position: relative;
 }
-main.load {
-  overflow: hidden;
-}
 main:before {
   content: "";
   display: block;
@@ -424,12 +421,21 @@ main:before {
   background: linear-gradient(180deg, #1E1F22 18.23%, rgba(30, 31, 34, 0) 100%);
 }
 
+@media screen and (max-width: 576px) {
+  main {
+    position: relative;
+  }
+  main.load {
+    overflow: hidden;
+  }
+}
 .loader_wrapper {
   width: 100%;
   height: 100dvh;
   z-index: 1000;
   position: relative;
   position: fixed;
+  display: none;
 }
 .loader_wrapper:after {
   content: "";
@@ -452,6 +458,7 @@ main:before {
   height: 100%;
   position: relative;
   z-index: 2;
+  padding: 30px;
 }
 
 .loader_logo {
@@ -826,6 +833,10 @@ main:before {
   align-items: flex-end;
   justify-content: space-between;
   padding-top: 40px;
+}
+
+.home_bottom_item {
+  overflow: hidden;
 }
 
 .arrow {
@@ -2764,28 +2775,49 @@ main:before {
     height: calc(100% + 20px);
   }
 }
-.header_bg_img img {
+body.animate_show .header_bg_img img {
   animation: 1.5s bgImg ease-in forwards;
   animation-delay: 5.5s;
   transform: scale(1.5);
 }
-.header_bg_img:before {
+body.animate_show .header_bg_img:before {
   animation: 1.5s bgBefore ease-in forwards;
   animation-delay: 5.5s;
   opacity: 0;
 }
-
-.loader_wrapper {
+body.animate_show .loader_wrapper {
+  display: block;
   animation: 1s endAnimate ease-in forwards;
   animation-delay: 4.5s;
 }
-.loader_wrapper:after {
+body.animate_show .loader_wrapper:after {
   animation: 1s endAnimateAfter ease-in forwards;
   animation-delay: 4.5s;
 }
-
-.loader_line:after {
+body.animate_show .loader_line:after {
   animation: 4s prog ease-in forwards;
+}
+body.animate_show .home_title .line span {
+  top: -0.1em;
+  transform: translate3d(0, 100%, 0);
+  animation: title 0.9s ease-in-out forwards;
+  animation-delay: 6s;
+}
+body.animate_show .home_title .line span:first-child span {
+  animation-delay: 0.2s;
+}
+body.animate_show .home_title .line span:nth-child(2) span {
+  animation-delay: 0.1s;
+}
+body.animate_show .home_subtitle {
+  transform: translateY(100%);
+  animation: translateY 1.5s ease-in-out forwards;
+  animation-delay: 7s;
+}
+body.animate_show .arrow {
+  transform: translateY(100%);
+  animation: translateY 1.5s ease-in-out forwards;
+  animation-delay: 7.5s;
 }
 
 @keyframes bgImg {
@@ -2818,40 +2850,11 @@ main:before {
     top: 0;
   }
 }
-.home_title .line span {
-  top: -0.1em;
-  transform: translate3d(0, 100%, 0);
-  animation: title 0.9s ease-in-out forwards;
-  animation-delay: 6s;
-}
-.home_title .line span:first-child span {
-  animation-delay: 0.2s;
-}
-.home_title .line span:nth-child(2) span {
-  animation-delay: 0.1s;
-}
-
 @keyframes title {
   to {
     transform: translate3d(0px, 0em, 0px);
   }
 }
-.home_bottom_item {
-  overflow: hidden;
-}
-
-.home_subtitle {
-  transform: translateY(100%);
-  animation: translateY 1.5s ease-in-out forwards;
-  animation-delay: 7s;
-}
-
-.arrow {
-  transform: translateY(100%);
-  animation: translateY 1.5s ease-in-out forwards;
-  animation-delay: 7.5s;
-}
-
 @keyframes translateY {
   to {
     transform: translateY(0);
