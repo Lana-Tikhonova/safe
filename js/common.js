@@ -44,6 +44,13 @@ $(document).ready(function () {
 
     });
 
+    // Закрытие мобильного меню при клике на пункты меню
+    $('.mobile_menu .menu a').on('click', function (e) {
+        $('.mobile_menu').removeClass('active');
+        $('body').removeClass('locked');
+        $('.mobile_menu_btn').removeClass('active');
+    });
+
     //Скролл к верху страницы
     $('.scrollup').on('click', function () {
         $("html, body").animate({
