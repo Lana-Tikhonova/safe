@@ -25,15 +25,6 @@ $(document).ready(function () {
         }
     });
 
-    AOS.init({
-        easing: 'ease-in-out',
-        delay: 100,
-        once: true,
-        duration: 700,
-        offset: 100,
-        // disable: 'mobile'
-    });
-
     //Прокрутка к секции при клике из меню или на стрелку
     $('.arrow_down, .menu a').on('click', function (e) {
         e.preventDefault();
@@ -121,18 +112,32 @@ $(document).ready(function () {
         mousewheelControl: true,
         watchOverflow: true,
         watchSlidesVisibility: true,
+        centeredSlides: true,
+        loop: true,
         navigation: {
             nextEl: ".partners_btn_next",
             prevEl: ".partners_btn_prev",
         },
         breakpoints: {
             577: {
+                centeredSlides: false,
+                loop: false,
                 slidesPerView: 3,
             },
             1101: {
+                centeredSlides: false,
+                loop: false,
                 slidesPerView: 4,
             },
         },
+    });
+    AOS.init({
+        easing: 'ease-in-out',
+        delay: 100,
+        once: true,
+        duration: 700,
+        offset: 100,
+        // disable: 'mobile'
     });
 
     //слайдер в блоке Руководство

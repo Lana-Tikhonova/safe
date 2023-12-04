@@ -233,8 +233,8 @@ button {
   width: 24px;
   height: 24px;
 }
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.swiper-button-next:not(.swiper-button-disabled):hover,
+.swiper-button-prev:not(.swiper-button-disabled):hover {
   border-color: #FFCF00;
 }
 
@@ -1201,6 +1201,33 @@ main:before {
   font-weight: 500;
   line-height: 100%;
   margin-top: auto;
+  position: relative;
+  transition: all 0.5s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4px;
+}
+.company_item .link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.2px;
+  border-radius: 19.2px;
+  background: #FFCF00;
+  box-shadow: 0px 4.8px 19.2px 0px rgba(255, 207, 0, 0.64);
+  transition: all 0.5s ease;
+}
+.company_item .link:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+.company_item .link:hover:after {
+  width: 100%;
 }
 
 .company_item_separate {
@@ -1546,6 +1573,7 @@ main:before {
      object-fit: contain;
   -o-object-position: bottom;
      object-position: bottom;
+  transition: all 0.5s ease;
 }
 
 .administration_item_text {
@@ -2104,6 +2132,9 @@ main:before {
     background: #323336;
     border-color: #FFCF00;
   }
+  .administration_item:not(:hover) .administration_item_people img {
+    filter: saturate(0.6);
+  }
   .administration_item:hover {
     border-color: #FFCF00;
   }
@@ -2480,8 +2511,7 @@ main:before {
   .modal_people_block_right {
     width: calc(100% - 320px);
   }
-  .partners_item:before {
-    border-radius: 61561.5px;
+  .partners_slider .swiper-slide-active .partners_item:before {
     border: 2px solid var(--ffcf-00, #FFCF00);
     box-shadow: 0px 2px 16px 0px rgba(255, 207, 0, 0.54);
   }
@@ -2766,6 +2796,13 @@ main:before {
   }
   .modal-content .result_item {
     width: 100%;
+  }
+  .partners_item_wrapper[data-aos=fade-left] {
+    transform: scale(0.6) !important;
+    transition-delay: 0.1s !important;
+  }
+  .partners_item_wrapper[data-aos=fade-left].aos-animate {
+    transform: translateZ(0) scale(1) !important;
   }
 }
 @media screen and (max-width: 340px) {
