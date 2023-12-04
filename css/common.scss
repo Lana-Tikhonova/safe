@@ -3346,6 +3346,10 @@ $animation-setting: 0.8s ease-in-out forwards;
 			}
 		}
 	}
+
+	.administration_item .administration_item_text {
+		max-width: 280px;
+	}
 }
 
 @media screen and (max-width:340px) {

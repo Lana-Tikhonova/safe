@@ -2804,6 +2804,9 @@ main:before {
   .partners_item_wrapper[data-aos=fade-left].aos-animate {
     transform: translateZ(0) scale(1) !important;
   }
+  .administration_item .administration_item_text {
+    max-width: 280px;
+  }
 }
 @media screen and (max-width: 340px) {
   h1 {
