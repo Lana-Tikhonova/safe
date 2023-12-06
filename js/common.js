@@ -160,6 +160,24 @@ $(document).ready(function () {
                 spaceBetween: 62,
             },
         },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        on: {
+            afterInit() {
+                this.autoplay.stop();
+            },
+            init() {
+                this.el.addEventListener('mouseenter', () => {
+                    this.autoplay.start();
+                });
+
+                this.el.addEventListener('mouseleave', () => {
+                    this.autoplay.stop();
+                });
+            }
+        },
     });
 
     // счетчик

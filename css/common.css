@@ -1963,7 +1963,23 @@ main:before {
 }
 
 .modal_text {
-  margin-bottom: 30px;
+  overflow-y: auto;
+  max-height: 154px;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #FFCF00 #1E1F22;
+}
+.modal_text::-webkit-scrollbar {
+  width: 6px;
+}
+.modal_text::-webkit-scrollbar-track {
+  background: #1E1F22;
+  border-radius: 20px;
+}
+.modal_text::-webkit-scrollbar-thumb {
+  background-color: #FFCF00;
+  border-radius: 20px;
+  border: none;
 }
 
 .modal_btns {
@@ -2080,7 +2096,7 @@ main:before {
 }
 
 @media screen and (min-width: 993px) {
-  .menu_list a:hover {
+  .header .menu_list a:hover {
     font-size: 21.6px;
   }
   .partners_item:hover .partners_item_img {
@@ -2914,7 +2930,7 @@ body.animate_show .arrow {
   width: 100%;
 }
 .mission_svg.aos-animate #anim_path_arrow {
-  animation: animArrow 1.5s ease-in-out forwards;
+  animation: animArrow 2s ease-in-out forwards;
 }
 .mission_svg.aos-animate #anim_path_1,
 .mission_svg.aos-animate #anim_path_2,
@@ -2966,14 +2982,14 @@ body.animate_show .arrow {
 #anim_path_arrow {
   will-change: transform;
   transition: all 0.5s ease;
-  transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -455, 54, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -455, 30, 0, 1) rotate(50deg);
 }
 
 @keyframes animArrow {
   0% {
-    transform: matrix3d(1, 0.1, -0.5, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, -455, 54, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -455, 30, 0, 1) rotate(50deg);
   }
   100% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1) rotate(0);
   }
 }
