@@ -2204,6 +2204,10 @@ $animation-setting: 0.8s ease-in-out forwards;
 	line-height: 110%;
 }
 
+.modal_text {
+	margin-bottom: 30px;
+}
+
 .modal_subtitle {
 	font-size: 16px;
 	font-style: normal;
@@ -2218,28 +2222,6 @@ $animation-setting: 0.8s ease-in-out forwards;
 	font-weight: 500;
 }
 
-.modal_text {
-	overflow-y: auto;
-	max-height: 154px;
-	padding-right: 20px;
-	scrollbar-width: thin;
-	scrollbar-color: $color_yellow $color_black;
-
-	&::-webkit-scrollbar {
-		width: 6px;
-	}
-
-	&::-webkit-scrollbar-track {
-		background: $color_black;
-		border-radius: 20px;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: $color_yellow;
-		border-radius: 20px;
-		border: none;
-	}
-}
 
 .modal_btns {
 	display: flex;
@@ -2277,6 +2259,27 @@ $animation-setting: 0.8s ease-in-out forwards;
 	.modal_text {
 		font-size: 16px;
 		line-height: 140%;
+		overflow-y: auto;
+		max-height: 154px;
+		padding-right: 20px;
+		scrollbar-width: thin;
+		scrollbar-color: $color_yellow $color_black;
+		margin-bottom: 0;
+
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $color_black;
+			border-radius: 20px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $color_yellow;
+			border-radius: 20px;
+			border: none;
+		}
 	}
 }
 
@@ -3172,6 +3175,10 @@ $animation-setting: 0.8s ease-in-out forwards;
 	}
 }
 
+.modal_company .modal_title span {
+	display: none;
+}
+
 @media screen and (max-width:576px) {
 	.stars_list svg {
 		fill: $color_yellow;
@@ -3333,7 +3340,15 @@ $animation-setting: 0.8s ease-in-out forwards;
 
 	.modal_company {
 		.modal_title {
-			display: none;
+			display: inline;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+
+			span {
+				display: inline;
+			}
 		}
 	}
 

@@ -1948,6 +1948,10 @@ main:before {
   line-height: 110%;
 }
 
+.modal_text {
+  margin-bottom: 30px;
+}
+
 .modal_subtitle {
   font-size: 16px;
   font-style: normal;
@@ -1960,26 +1964,6 @@ main:before {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-}
-
-.modal_text {
-  overflow-y: auto;
-  max-height: 154px;
-  padding-right: 20px;
-  scrollbar-width: thin;
-  scrollbar-color: #FFCF00 #1E1F22;
-}
-.modal_text::-webkit-scrollbar {
-  width: 6px;
-}
-.modal_text::-webkit-scrollbar-track {
-  background: #1E1F22;
-  border-radius: 20px;
-}
-.modal_text::-webkit-scrollbar-thumb {
-  background-color: #FFCF00;
-  border-radius: 20px;
-  border: none;
 }
 
 .modal_btns {
@@ -2013,6 +1997,24 @@ main:before {
 .modal_people .modal_text {
   font-size: 16px;
   line-height: 140%;
+  overflow-y: auto;
+  max-height: 154px;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #FFCF00 #1E1F22;
+  margin-bottom: 0;
+}
+.modal_people .modal_text::-webkit-scrollbar {
+  width: 6px;
+}
+.modal_people .modal_text::-webkit-scrollbar-track {
+  background: #1E1F22;
+  border-radius: 20px;
+}
+.modal_people .modal_text::-webkit-scrollbar-thumb {
+  background-color: #FFCF00;
+  border-radius: 20px;
+  border: none;
 }
 
 .modal_people_block {
@@ -2685,6 +2687,10 @@ main:before {
     margin-top: 0;
   }
 }
+.modal_company .modal_title span {
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
   .stars_list svg {
     fill: #FFCF00;
@@ -2799,7 +2805,14 @@ main:before {
     text-align: center;
   }
   .modal_company .modal_title {
-    display: none;
+    display: inline;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .modal_company .modal_title span {
+    display: inline;
   }
   .modal-content {
     padding: 30px;

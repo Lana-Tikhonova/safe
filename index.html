@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="vendors/animate/aos.min.css">
-    <link rel="stylesheet" href="css/common.css?10">
+    <link rel="stylesheet" href="css/common.css?11">
     <!-- чтобы при загрузке страницы у элементов не срабатывал transition -->
     <script> </script>
 </head>
@@ -41,7 +41,10 @@
 <!-- Для бэкендера: в некоторых секциях, где, возможно, блоки будут выводиться циклом, есть data-aos-delay="" с  разными значениями.  
 Вот секции где есть повторяющиеся блоки с эти атрибутом: result_list, company_list,partners_slider,administration_slider-->
 
+
 <body class='page_home animate_show' style="overflow: hidden;">
+    <!-- <body class='page_home'> -->
+
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function (event) {
             setTimeout(() => {
@@ -844,14 +847,17 @@
                 </button>
                 <div class="modal_body">
                     <div class='modal_logo'><img src="imgs/logos_1.svg" alt=""></div>
-                    <div class='modal_title'>«Сейф Ломбард»</div>
-                    <div class='modal_text'>это финансовая компания, предлагающая клиентам возможность получить
+                    <div class='modal_text'>
+                        <div class='modal_title'>«Сейф Ломбард» <span>-</span></div>
+
+                        это финансовая компания, предлагающая клиентам возможность получить
                         краткосрочные микрокредиты, заложив в качестве гарантии свои ценные золотые изделия и
                         смартфоны.
                         Этот сервис обеспечивает быстрый доступ к финансированию, используя имеющиеся ценности в
                         качестве залога, что делает его удобным и доступным для клиентов, нуждающихся в
                         краткосрочной
-                        финансовой поддержке.</div>
+                        финансовой поддержке.
+                    </div>
                     <div class='modal_title_h2'>Преимущества</div>
                     <div class='result_list'>
                         <div class='result_item'>
