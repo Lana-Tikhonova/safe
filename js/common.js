@@ -51,13 +51,13 @@ $(document).ready(function () {
     });
 
     //faq
-    $(".faq_item_btn").click(function () {
-        $('.faq_item_btn').not(this).parent().removeClass('active');
-        $('.faq_item_btn').not(this).next().slideUp("ease-out")
+    // $(".faq_item_btn").click(function () {
+    //     $('.faq_item_btn').not(this).parent().removeClass('active');
+    //     $('.faq_item_btn').not(this).next().slideUp("ease-out")
 
-        $(this).parent().toggleClass('active');
-        $(this).next().slideToggle("ease-out");
-    })
+    //     $(this).parent().toggleClass('active');
+    //     $(this).next().slideToggle("ease-out");
+    // })
 
     //Скрыть/показать хедер при прокрутке
     let prevScroll = $(window).scrollTop();
